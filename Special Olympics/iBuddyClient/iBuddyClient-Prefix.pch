@@ -1,0 +1,104 @@
+//
+// Prefix header for all source files of the 'iBuddyClient' target in the 'iBuddyClient' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "Constants.h"
+    #import "IBLoginVC.h"
+#import "CommonFunction.h"
+    #import "ASyncURLConnection.h"
+    #import "MBProgressHUD.h"
+    #import "IBAppDelegate.h"
+    #import "IBForgotPasswordVC.h"
+    #import "IBRegisterVC.h"
+    #import "Base64.h"
+    #import "PaymentProgramVC.h"
+    #import "IBDashboardVC.h"
+    #import "IBPaymentVC.h"
+    #import "IBOffersVC.h"
+    #import "IBMyCardsVC.h"
+    #import "IBGiftVC.h"
+    #import "IBOffersDescriptionVC.h"
+    #import "SideBarVC.h"
+    #import "IBRedeemOffer.h"
+    #import <QuartzCore/QuartzCore.h>
+    #import "CustomFormViewController.h"
+    #import "BSKeyboardControls.h"
+    #import "IBCreditCardPaymentVC.h"
+    #import "KSConstant.h"
+//    #import "ZBarSDK.h"
+    #import "KSChangePasswordViewController.h"
+    #import "SharedManager.h"
+    #import "IBReferEmailVC.h"
+    #import "IBAddReferEmailVC.h"
+    #import "IBEventDetailVC.h"
+    #import "IBShortRegisterVC.h"
+    #import "IBExtraDonationVC.h"
+    #import "IBWithGratitudeVC.h"
+    #import "UIViewController+Additions.h" 
+
+#define kDevice [[UIDevice currentDevice] userInterfaceIdiom]
+#define kIphone UIUserInterfaceIdiomPhone
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define kWindowHeight [[ UIScreen mainScreen] bounds].size.height
+#define kWindowWidth [[ UIScreen mainScreen] bounds].size.width
+
+#define kDashboardX_iPad 75
+#define kDashboardY_iPad 150
+#define kDashboardWidth_iPad 640
+#define kDashboardHeight_iPad 725
+#define kDashboardY_iPhone 44
+#define kDashBoardHeightMinusFactor_iPhone 140
+
+#define cmd  @"_xclick-subscriptions"
+//#define cmd  @"_mobile-express-checkout"
+#define business @"payments@ibuddyclub.com"
+#define item_name @"iBuddyClub Subscription"
+#define item_number @"iBuddyClub"
+
+#define true_return @"http://ibuddyclub.com/payment/success"
+
+#define cancel_return @"http://ibuddyclub.com/payment/cancel"
+
+#define notify_url @"http://ibuddyclub.com/payment/ipn"
+
+#define p3 @"1"
+
+#define t3 @"Y"
+
+#define Tagsrc @"1"
+
+#define no_note @"1"
+
+#define custom @""
+
+#define deviceTest @"iphone"
+/*
+#define cmd  @"_xclick-subscriptions"
+#define business @"angad1.singh@sebiz.net"
+#define item_name @"iBuddyClub Subscription"
+#define item_number @"iBuddyClub"
+
+#define true_return @"http://ibuddyclub.netsmartz.us/payment/success"
+
+#define cancel_return @"http://ibuddyclub.netsmartz.us/payment/cancel"
+
+#define notify_url @"http://ibuddyclub.netsmartz.us/payment/ipn"*/
+
+
+#define VALID_STRING(_str_)	\
+_str_ && ![_str_ isKindOfClass:[NSNull class]] && ![_str_ isEqual:[NSNull null]] && ![_str_ isEqualToString:@"(null)"] && ![_str_ isEqualToString:@"<null>"]  ? _str_ : @""
+
+
+#define CaseInsensitive_STRING(_str1_,_str2_)	\
+([_str1_ compare:_str2_ options:NSCaseInsensitiveSearch] == NSOrderedSame)
+
+#endif

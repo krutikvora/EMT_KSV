@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentProgramVC">
+            <connections>
+                <outlet property="btnOK" destination="10" id="25"/>
+                <outlet property="btnPaymentProgram" destination="8" id="23"/>
+                <outlet property="btnSearch" destination="JI8-yU-VdP" id="aHz-nR-GFK"/>
+                <outlet property="lblCopyRight" destination="fD0-1f-lGd" id="0hh-pe-JTb"/>
+                <outlet property="lblDate" destination="30" id="31"/>
+                <outlet property="lblOR" destination="32" id="33"/>
+                <outlet property="lblRecurringDate" destination="28" id="29"/>
+                <outlet property="lblSalesperson" destination="11" id="15"/>
+                <outlet property="lblSubscriptionstatus" destination="26" id="27"/>
+                <outlet property="txtSalesperson" destination="9" id="17"/>
+                <outlet property="typeSegmentCntrl" destination="kb4-FZ-Ay5" id="JEq-n1-D0S"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" misplaced="YES" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="549"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Blank_BG.png" id="6">
+                    <frame key="frameInset"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ePN Logo.png" id="92p-dg-d59">
+                    <frame key="frameInset" minX="173" minY="22.99%" width="81" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Secured by" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Rd-Ce-0Ch">
+                    <frame key="frameInset" minX="67" minY="23.12%" width="96" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="Login_TopTitleBar.png" id="s0c-7f-T1Z">
+                    <frame key="frameInset" minX="-1" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="JOIN HERE™" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XVc-Mk-UuC">
+                    <frame key="frameInset" minX="48.94%" width="179" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Logo.png" id="eHb-7b-yCm">
+                    <frame key="frameInset" minX="53.75%" minY="12.24%" width="240" height="165"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U2H-ZY-Dxk">
+                    <frame key="frameInset" minX="-1" width="48" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                    <state key="normal" image="ic_menu_icon"/>
+                    <connections>
+                        <action selector="showMenu:" destination="-1" eventType="touchUpInside" id="oAS-m8-7fE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8">
+                    <frame key="frameInset" minX="49.33%" minY="79.27%" width="245" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <state key="normal" title="Purchase App Without Fundraiser" backgroundImage="Buton_BG.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9">
+                    <frame key="frameInset" minX="40.58%" minY="52.41%" width="182" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="18"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10">
+                    <frame key="frameInset" minX="51.79%" minY="65.45%" width="208" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <state key="normal" title="Purchase App" backgroundImage="Buton_BG.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnOkClicked:" destination="-1" eventType="touchUpInside" id="22"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Enter Fundraiser Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="11">
+                    <frame key="frameInset" minX="51.79%" minY="39.77%" width="208" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Your subscription is already active" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26">
+                    <frame key="frameInset" minX="54.55%" width="287" height="21" maxY="191"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Next recurring date:-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="28">
+                    <frame key="frameInset" minX="20" width="179" height="21" maxY="155"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30">
+                    <frame key="frameInset" width="127" height="21" maxX="8" maxY="155"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="© 2013 iBuddyClub, Inc. All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fD0-1f-lGd">
+                    <frame key="frameInset" width="320" height="21" maxY="-14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Or purchase App without a Fundraiser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32">
+                    <frame key="frameInset" minX="14" minY="72.35%" width="292" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kb4-FZ-Ay5">
+                    <frame key="frameInset" minX="82" minY="44.62%" height="29" maxX="76"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Supporters"/>
+                        <segment title="Educators"/>
+                    </segments>
+                    <color key="tintColor" red="0.74509803921568629" green="0.24313725490196078" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JI8-yU-VdP">
+                    <frame key="frameInset" minY="52.42%" width="34" height="32" maxX="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button" image="9591083A-4A4C-418E-91D0-AE9CD59AED3A">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSearchClicked:" destination="-1" eventType="touchUpInside" id="2Z4-9S-Jvd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="110" y="331.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="9591083A-4A4C-418E-91D0-AE9CD59AED3A" width="44" height="39">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7NDQsIDM5fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPESNuTU0AKgAAGtgAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAEDAAExDAICiBUEBdAYBwb1GwkJ/xsJCf8bCQn/GwkJ/xsJCf8bCQn/GwkJ
+/xsJCf8bCQn/GwkJ/xsJCf8bCQn/GwkJ/xsJCf8bCQn/GwkJ/xsJCf8bCQn/GwkJ/xsJCf8bCQn/GwkJ
+/xsJCf8bCQn/GAcG9RUEBdAMAgKIAwABMQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAEAAE6EwYGtCAICfYqCgv/LQoL/y4ICv8uBwn/LgcJ/y4HCf8uBwn/LgcJ/y4HCf8uBwn/LgcJ
+/y4HCf8uBwn/LgcJ/y4HCf8uBwn/LgcJ/y4HCf8uBwn/LgcJ/y4HCf8uBwn/LgcJ/y4HCf8uBwn/LgcJ
+/y4HCf8uCAr/LQoL/yoKC/8gCAn2EwYGtAQAAToAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwID
+biIICfQyDA3/OAoM/0EOEP9XISP/aDM0/3I9P/9zP0H/cz5A/3M+QP9zPkD/cz5A/3M+QP9zPkD/cz5A
+/3M+QP9zPkD/cz5A/3M+QP9zPkD/cz5A/3M+QP9zPkD/cz5A/3M+QP9zPkD/cz5A/3M+QP9zP0H/cj0/
+/2czNP9WISP/QA4Q/zkKDP8yDA3/IggJ9AsCA24AAAAAAAAAAAAAAAAAAAAAAAAAAAwDA28pCQr+Og0O
+/0INEP9yPD3/toCD/9CTlf/WkJP/25GT/9uRlP/bkZP/25GT/9uRk//bkZP/25GT/9uRk//bkZP/25GT
+/9uRk//bkZP/25GT/9uRk//bkZP/25GT/9uRk//bkZP/25GT/9uRk//bkZP/25GT/9uRlP/bkZP/1pCT
+/8+Tlf+zfoD/bjc5/0IND/86DQ7/KQkK/gwDA28AAAAAAAAAAAAAAAAGAgE+JwkK9z0MD/9HEBT/lV5g
+/9aMj//GXWH/uUBG/7M2PP+vMDb/ry42/68uNv+vLjb/ry42/68uNv+vLjb/ry42/68uNv+vLjb/ry42
+/68uNv+vLjb/ry42/68uNv+vLjb/ry42/68uNv+vLjb/ry42/68uNv+vLjb/ry42/68wNv+zNjz/uUJH
+/8dfY//VjZD/k1xe/0YQEv89DA//JwkK9wYCAT4AAAAAAAAABx0GB748DQ7/Qw4R/5FWWf/PdHf/tDc9
+/60qMf+tKjH/risy/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz
+/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64rMv+tKjL/rSox
+/7Q3Pf/Rdnn/jVNW/0INEP88DQ//HQYHvgAAAAcIAQI/MQsM+0EMD/9nLzH/yG1x/7AwNv+tKjH/risy
+/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz
+/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uLDP/riwz/64sM/+uKzL/rSkx
+/7IxOP/Hb3L/ZSwu/0ELDv8xCwz7CAECPxgGBp49Dg//Qg0Q/5hRU/+6PEP/rSkx/64rMv+uKzL/risy
+/64rMv+uKzL/risy/64rMv+uKzL/risy/64rMv+uKzL/risy/64rMv+uKzL/riox/64rMv+uKzL/risy
+/64rMv+uKzL/risy/64rMv+uKzL/risy/64rMv+uKzL/risy/64rMv+uKzL/risy/64rMv+uKzL/rSkx
+/7o+RP+VTlD/Qg0Q/z0OD/8YBgaeKAgK40ENEP9MFhj/qkpO/7ArMv+uKjH/riox/64qMf+uKjH/riox
+/64qMf+uKjH/riox/64qMf+uKjH/riox/64qMf+tJy//rCMs/6wlLf+tKDD/rSYu/6sjLP+sJi7/rikx
+/64qMf+uKjH/riox/64qMf+uKjH/riox/64qMf+uKjH/riox/64qMf+uKjH/riox/64qMf+uKjH/sSwz
+/6hKTv9JFRf/QQ0Q/ykICuQzCwz8Qg0P/1AbHf+qPEL/rycw/64pMf+uKTH/rikx/64pMf+uKTH/rikx
+/64pMf+uKTH/rikx/64pMf+tJS7/rSUu/7pESv/OeHz/25yd/+Gsrv/doaP/0oKG/79PVP+uKTH/rCUs
+/64pMf+uKTH/rikx/64pMf+uKTH/rikx/64pMf+uKTH/rikx/64pMf+uKTH/rikx/64pMf+vKDD/pzxC
+/04aHP9CDRD/MwsM/DUNDv9CDRD/Thkb/6c1PP+vJi//ricw/64nMP+uJzD/ricw/64nMP+uJzD/ricw
+/64nMP+uKDD/rCMr/7c+RP/gpaf/+/T0/////////////////////////////vr6/+i9vv+/UFX/rCIr
+/64nMP+uJzD/ricw/64nMP+uJzD/ricw/64nMP+uJzD/ricw/64nMP+uJzD/ricw/7AmL/+lNjz/TRkb
+/0INEP81DQ7/Ng0O/0INEP9NGRv/pjQ7/68lLv+uJi//riYv/64mL/+uJi//riYv/64mL/+uJi//ricv
+/6whKv/AUFX/89ze//////////////////78/P/79PT//Pn5//////////////////rw8P/LbnL/rCMr
+/64mL/+uJi//riYv/64mL/+uJi//riYv/64mL/+uJi//riYv/64mL/+uJi//sCUv/6Q0Ov9MGBr/Qg0Q
+/zYNDv82DQ7/Qg0Q/00YG/+mMzr/ryQt/64lLv+uJS7/riUu/64lLv+uJS7/riUu/64lLv+tIir/ukFH
+//Ti4v////////////fn6f/WiY3/wVRZ/7tFS/+/TVL/z3h9//DU1f////////////z39//FXmL/rCEp
+/64lLv+uJS7/riUu/64lLv+uJS7/riUu/64lLv+uJS7/riUu/64lLv+wJC3/pDM5/0wYGv9CDRD/Ng0O
+/zYNDv9CDRD/TRgb/6YyOP+vIyz/riQs/64kLP+uJCz/riQs/64kLP+uJCz/riMs/64kLf/mtbf/////
+///////rxcX/uT1E/6scJv+sHyj/rSEq/6wgKP+rHSb/si42/9+kpv////////////Pd3v+0Mzr/rSIr
+/64kLP+uJCz/riQs/64kLP+uJCz/riQs/64kLP+uJCz/riQs/7AjLP+kMjj/TBga/0INEP82DQ7/Ng0O
+/0INEP9NGRv/pjI3/68iK/+uIyz/riMs/64jLP+uIyz/riMs/64jLP+sHif/w1db//77+///////893e
+/7Y4Pv+sHif/riMs/64jLP+uIyz/riMs/64jLP+tICn/ryQt/+e7vP///////////9J/gv+sHif/riMs
+/64jLP+uIyz/riMs/64jLP+uIyz/riMs/64jLP+uIyz/sCIr/6QyN/9MGBr/Qg0Q/zYNDv82DQ7/Qg0Q
+/00ZG/+mMDb/ryEq/64iK/+uIiv/riIr/64iK/+uIiv/riIr/60eJ//cmZz////////////OdHf/qxok
+/64iK/+uIiv/riIr/64iK/+uIiv/riIr/64iK/+sHSb/v0tQ//z39///////7szN/68kLP+uISr/riIr
+/64iK/+uIiv/riIr/64iK/+uIiv/riIr/64iK/+wISr/pDE2/0wYGv9CDRD/Ng0O/zYNDv9CDRD/TRkb
+/6YvNv+vICn/riEq/64hKv+uISr/riEq/64hKv+uISr/riEr/+3Jy///////+/Ly/7c3Pf+tHij/riEq
+/64hKv+uISr/riEq/64hKv+uISr/riEq/64gKf+wJi7/7s3P///////47Oz/tjQ7/60fKP+uISr/riEq
+/64hKv+uISr/riEq/64hKv+uISr/riEq/7AgKf+kLzb/TBga/0INEP82DQ7/Ng0O/0INEP9NGRv/pi41
+/68fKP+uICj/riAo/64gKP+uICj/riAo/64gKP+vISr/89zc///////z3d7/sywz/60eJ/+uICj/riAo
+/64gKP+uICj/riAo/64gKP+uICj/rh8o/64gKP/ltLb///////vy8v+7QEb/rRwl/64gKP+uICj/riAo
+/64gKP+uICj/riAo/64gKP+uICj/sB8o/6QuNf9MGBr/Qg0Q/zYNDv82DQ7/Qg0Q/00ZG/+nLjX/sB8o
+/68gKP+vICj/ryAo/68gKP+vICj/ryAo/7AgKf/y1NX///////fo6v+0Lzb/rh0m/68gKP+vICj/ryAo
+/68gKP+vICj/ryAo/68gKP+vHyj/ryEq/+m/wf//////+/Dw/7s6QP+uHSb/ryAo/68gKP+vICj/ryAo
+/68gKP+vICj/ryAo/68gKP+xHyj/pS41/0wYGv9CDRD/Ng0O/zYNDv9CDRD/Sxka/4wrMP+NHCH/jR0i
+/40dIv+NHSL/jR0i/40dIv+NHSL/ixoh/9SrrP////////7+/69SVf+JFh3/jR0i/40dIv+NHSL/jR0i
+/40dIv+NHSL/jR0i/4saIP+aMDX/9+vs///////t3Nz/kCQo/4wbIf+NHSL/jR0i/40dIv+NHSL/jR0i
+/40dIv+NHSL/jR0i/44cIf+KKzD/ShcZ/0INEP82DQ7/Ng0O/0MNEP9GGBn/TCQj/0AVFP9BFRX/QRUV
+/0EVFf9BFRX/QRUV/0EVFf88ERD/hWNi////////////v6+u/0AVFP8/FBT/QRUV/0EVFf9BFRX/QRUV
+/0EVFf9BFRX/Og8P/5qAgP///////////66Vk/8+ExL/QRUV/0EVFf9BFRX/QRUV/0EVFf9BFRX/QRUV
+/0EVFf9BFRX/QBUU/0wkI/9FFxj/Qw0Q/zYNDv82DQ7/Qw0Q/0YYGf9OJST/QxUV/0QWFv9EFhb/RBYW
+/0QWFv9EFhb/RBYW/0MUFP9PIiL/4dfW///////+/v7/m317/0ITE/9BEhL/RBUW/0QWFv9EFhb/QhMT
+/z8QEf99VlX/9vT0///////39vb/ZTs6/0ISEv9EFhb/RBYW/0QWFv9EFhb/RBYW/0QWFv9EFhb/RBYW
+/0QWFv9DFRX/TiUk/0UXGP9DDRD/Ng0O/zYNDv9DDRD/RhgZ/1AlJP9FFhb/RhcW/0YXFv9GFxb/RhcW
+/0YXFv9GFxb/RxcW/0ISEv9+V1b//Pv7////////////tp6e/2Q4OP9HFxf/RBQU/0UVFf9bLS3/oIKB
+//n29v///////v7+/59/f/9DExP/RhcW/0YXFv9GFxb/RhcW/0YXFv9GFxb/RhcW/0YXFv9GFxb/RhcW
+/0YWFv9QJST/RhcY/0MNEP82DQ7/Ng0O/0MNEP9GGBn/UiUk/0gWFv9JFxb/SRcW/0kXFv9JFxb/SRcW
+/0kXFv9JFxb/SRcW/0YUFP+Zdnb//Pz8////////////9vTy/9jKyv/HtbT/0sLC//Dq6v//////////
+///////59vb/dUpJ/0IQEf9JFxb/SRcW/0kXFv9JFxb/SRcW/0kXFv9JFxb/SRcW/0kXFv9JFxb/SRYW
+/1MlJP9GFxj/Qw0Q/zYNDv82DQ7/Qw0Q/0YYGf9VJSX/TBYW/0wXF/9MFxf/TBcX/0wXF/9MFxf/TBcX
+/0wXF/9NFxf/TBYW/0oUFf+IX1//5tzc///////////////////////////////////////8/Pz/////
+///////s5eX/c0VE/0cREv9MFxf/TBcX/0wXF/9MFxf/TBcX/0wXF/9MFxf/TBcX/0wXF/9MFhb/ViYl
+/0YXGP9DDRD/Ng0O/zYNDv9DDRD/Rxga/1klJv9QFhf/UBcY/1AXGP9QFxj/UBcY/1AXGP9QFxj/UBcY
+/1AXGP9QFxj/TxcX/0wSE/9fKSn/nHZ2/825uv/r4uH/+fb2//Hs7P/Yx8f/pICA/288PP/HsbL/////
+///////v5+f/d0dG/0wSE/9QFxj/UBcY/1AXGP9QFxj/UBcY/1AXGP9QFxj/UBcY/1AWF/9ZJib/RhcY
+/0MNEP82DQ7/Ng0O/0MNEP9HGBr/XSUn/1QXGP9UFxj/VBcY/1QXGP9UFxj/VBcY/1QXGP9UFxj/VBcY
+/1QXGP9UFxj/VBcY/1IVFv9OERL/Vhob/2AlJf9lKiv/Yigo/1keHv9PEhP/TxIU/1whIf/IsbL/////
+///////w6On/e0hI/1ATFP9UFxj/VBcY/1QXGP9UFxj/VBcY/1QXGP9UFxj/VBcY/1wmJ/9GFxj/Qw0Q
+/zYNDv82DQ7/Qw0Q/0cYGv9hJif/WRcY/1kYGf9ZGBn/WRgZ/1kYGf9ZGBn/WRgZ/1kYGf9ZGBn/WRgZ
+/1kYGf9ZGBn/WRgZ/1kYGf9YFxj/VxYY/1cWF/9XFhj/WBYY/1kYGf9ZGBr/VhQW/2AgIf/Kr6//////
+///////y6+v/gk1N/1YVFv9ZGBn/WRgZ/1kYGf9ZGBn/WRgZ/1kYGf9ZFxj/YCcn/0cXGP9DDRD/Ng0O
+/zYNDv9DDRD/SBga/2UnKP9eGBr/Xhgb/14YG/9eGBv/Xhgb/14YG/9eGBv/Xhgb/14YG/9eGBv/Xhgb
+/14YG/9eGBv/Xhgb/14YG/9eGBv/Xhgb/14YG/9eGBv/Xhgb/14YG/9eGBv/WxUX/2MgIf/JrK3/////
+//v6+v+VYWL/WxUX/14YG/9eGBv/Xhgb/14YG/9eGBv/Xhgb/14YGv9lJyn/RxcZ/0MNEP82DQ7/NQsM
+/EMNEP9IGBr/aScp/2MYG/9jGRv/Yxkb/2MZG/9jGRv/Yxkb/2MZG/9jGRv/Yxkb/2MZG/9jGRv/Yxkb
+/2MZG/9jGRv/Yxkb/2MZG/9jGRv/Yxkb/2MZG/9jGRv/Yxkb/2MZG/9jGRv/YBYY/2ggIv/CoKD/mmJj
+/18UF/9jGRv/Yxkb/2MZG/9jGRv/Yxkb/2MZG/9jGRv/Yxgb/2goKf9HFxn/Qw0Q/zULDPwvCQvjRA4R
+/0IUFv9qJCf/aRkb/2kZHP9pGRz/aRkc/2kZHP9pGRz/aRkc/2kZHP9pGRz/aRkc/2kZHP9pGRz/aRkc
+/2kZHP9pGRz/aRkc/2kZHP9pGRz/aRkc/2kZHP9pGRz/aRkc/2kZHP9pGRz/Zxgb/2gZHP9nFxr/aBkb
+/2kZHP9pGRz/aRkc/2kZHP9pGRz/aRkc/2kZHP9qGBv/aCQn/0ITFf9EDhH/LwkL5CAGCJ5EDxH/PA4Q
+/2AeIP90Gh7/cRoe/3EaHv9xGh7/cRoe/3EaHv9xGh7/cRoe/3EaHv9xGh7/cRoe/3EaHv9xGh7/cRoe
+/3EaHv9xGh7/cRoe/3EaHv9xGh7/cRoe/3EaHv9xGh7/cRoe/3EaHv9xGh7/cBod/3EaHv9xGh7/cRoe
+/3EaHv9xGh7/cRoe/3EaHv9xGh7/cRoe/3UaHv9dHSD/PA4Q/0UPEf8gBgieDAIDPkAMD/pBDRD/QBIU
+/38cIf9/GyD/fhsg/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg
+/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg/34bIP9+GyD/fhsg
+/34bIP9+GyD/fhsg/34bIP9/GyD/fRwh/z8SFP9BDRD/QAwP+gwCAz4BAAAGLQkLvkgPEv8yDA7/WRYZ
+/5EdJP+MHCL/ixwi/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi
+/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi/4scIv+LHCL/ixwi
+/4scIv+LHCL/jBwi/5EcI/9XFRj/MgwO/0gPEv8tCQu+AQAABgAAAAAOAgM+QA0Q90IOEf8qCw3/XxUZ
+/5sdJf+cHSX/mR0l/5gdJf+YHST/mB0k/5gdJP+YHST/mB0k/5gdJP+YHST/mB0k/5gdJP+YHST/mB0k
+/5gdJP+YHST/mB0k/5gdJP+YHST/mB0k/5gdJP+YHST/mB0k/5gdJP+YHST/mB0k/5gdJP+YHSX/mR0l
+/5wdJf+bHSX/XhQY/ysLDf9CDhH/QA0Q9w4CAz4AAAAAAAAAAAAAAAAaBQZwRQ0Q/j4OEP8mCgv/Qg8S
+/34ZH/+ZHST/ph4n/6gfJ/+oHyf/qB8n/6gfJ/+oHyf/qB8n/6gfJ/+oHyf/qB8n/6gfJ/+oHyf/qB8n
+/6gfJ/+oHyf/qB8n/6gfJ/+oHyf/qB8n/6gfJ/+oHyf/qB8n/6gfJ/+oHyf/qB8n/6YeJ/+ZHSX/exge
+/z4PEv8mCgv/Pw4Q/0UNEP4aBQZwAAAAAAAAAAAAAAAAAAAAAAAAAAAbBQZvQg0Q9EMPEf8rCw3/IQoL
+/y0NDv83DhD/OA4Q/zgOEP84DhD/OA4Q/zgOEP84DhD/OA4Q/zgOEP84DhD/OA4Q/zgOEP84DhD/OA4Q
+/zgOEP84DhD/OA4Q/zgOEP84DhD/OA4Q/zgOEP84DhD/OA4Q/zgOEP84DhD/Nw4Q/y0NDv8hCgv/LQsN
+/0QPEf9CDRD0GwUGbwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAgM8MQoMt0MNEPdCDhH/NQ0O
+/y8MDf8tCw3/LQsN/y0LDf8tCw3/LQsN/y0LDf8tCw3/LQsN/y0LDf8tCw3/LQsN/y0LDf8tCw3/LQsN
+/y0LDf8tCw3/LQsN/y0LDf8tCw3/LQsN/y0LDf8tCw3/LQsN/y0LDf8vDA3/Ng0O/0IOEf9DDRD3MQoM
+tw4CAzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDQIDMyUICYs4DA7TQw0Q
+90cOEf9HDhH/Rw4R/0cOEf9HDhH/Rw4R/0cOEf9HDhH/Rw4R/0cOEf9HDhH/Rw4R/0cOEf9HDhH/Rw4R
+/0cOEf9HDhH/Rw4R/0cOEf9HDhH/Rw4R/0cOEf9HDhH/Rw4R/0MNEPc4DA7TJQgJiw0CAzMAAAACAAAA
+AAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABACwAAAEBAAMAAAABACcAAAECAAMAAAAEAAAbhgEDAAMA
+AAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMAAAABAAQAAAEWAAMA
+AAABACcAAAEXAAQAAAABAAAa0AEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMAAAAEAAAbjodzAAcA
+AAfYAAAblgAAAAAACAAIAAgACAABAAEAAQABAAAH2GFwcGwCIAAAbW50clJHQiBYWVogB9kAAgAZAAsA
+GgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgAAABvZHNjbQAAAXgA
+AAWcY3BydAAABxQAAAA4d3RwdAAAB0wAAAAUclhZWgAAB2AAAAAUZ1hZWgAAB3QAAAAUYlhZWgAAB4gA
+AAAUclRSQwAAB5wAAAAOY2hhZAAAB6wAAAAsYlRSQwAAB5wAAAAOZ1RSQwAAB5wAAAAOZGVzYwAAAAAA
+AAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFByb2ZpbGUAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAAHwAAAAxz
+a1NLAAAAKAAAAYRkYURLAAAALgAAAaxjYUVTAAAAJAAAAdp2aVZOAAAAJAAAAf5wdEJSAAAAJgAAAiJ1
+a1VBAAAAKgAAAkhmckZVAAAAKAAAAnJodUhVAAAAKAAAApp6aFRXAAAAFgAAAsJuYk5PAAAAJgAAAthj
+c0NaAAAAIgAAAv5oZUlMAAAAHgAAAyBpdElUAAAAKAAAAz5yb1JPAAAAJAAAA2ZkZURFAAAALAAAA4pr
+b0tSAAAAFgAAA7ZzdlNFAAAAJgAAAth6aENOAAAAFgAAA8xqYUpQAAAAGgAAA+JlbEdSAAAAIgAAA/xw
+dFBPAAAAJgAABB5ubE5MAAAAKAAABERlc0VTAAAAJgAABB50aFRIAAAAJAAABGx0clRSAAAAIgAABJBm
+aUZJAAAAKAAABLJockhSAAAAKAAABNpwbFBMAAAALAAABQJydVJVAAAAIgAABS5hckVHAAAAJgAABVBl
+blVTAAAAJgAABXYAVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
+cgBlAGwAIABSAEcAQgAtAGIAZQBzAGsAcgBpAHYAZQBsAHMAZQBQAGUAcgBmAGkAbAAgAFIARwBCACAA
+ZwBlAG4A6AByAGkAYwBDHqUAdQAgAGgA7ABuAGgAIABSAEcAQgAgAEMAaAB1AG4AZwBQAGUAcgBmAGkA
+bAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0EOAQ5ACAEPwRABD4ERAQwBDkE
+OwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUAIABSAFYAQgDBAGwAdABhAGwA
+4QBuAG8AcwAgAFIARwBCACAAcAByAG8AZgBpAGyQGnUoACAAUgBHAEIAIIJyX2ljz4/wAEcAZQBuAGUA
+cgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGwATwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYA
+aQBsBeQF6AXVBeQF2QXcACAAUgBHAEIAIAXbBdwF3AXZAFAAcgBvAGYAaQBsAG8AIABSAEcAQgAgAGcA
+ZQBuAGUAcgBpAGMAbwBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkAYwBBAGwAbABnAGUA
+bQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsx3y8GAAgAFIARwBCACDVBLhc0wzHfGZukBoA
+IABSAEcAQgAgY8+P8GWHTvZOAIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wOTA7UDvQO5A7oDzAAgA8AD
+wQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOkAcgBpAGMAbwBBAGwA
+ZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMORA4fDiUOTAAgAFIARwBCACAO
+Fw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkAbABpAFkAbABlAGkAbgBlAG4A
+IABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBHAGUAbgBlAHIAaQENAGsAaQAgAFIARwBCACAAcAByAG8A
+ZgBpAGwAVQBuAGkAdwBlAHIAcwBhAGwAbgB5ACAAcAByAG8AZgBpAGwAIABSAEcAQgQeBDEESQQ4BDkA
+IAQ/BEAEPgREBDgEOwRMACAAUgBHAEIGRQZEBkEAIAYqBjkGMQZKBkEAIABSAEcAQgAgBicGRAY5BicG
+RQBHAGUAbgBlAHIAaQBjACAAUgBHAEIAIABQAHIAbwBmAGkAbABldGV4dAAAAABDb3B5cmlnaHQgMjAw
+NyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBYWVogAAAAAAAA81IAAQAAAAEWz1hZWiAA
+AAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRYWVogAAAAAAAAKBoAABWfAAC4NmN1cnYA
+AAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IAAP2R///7ov///aMAAAPcAADAbNIlJico
+WiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdlUmVwoycpKlpOU0ltYWdlUmVwWE5TT2Jq
+ZWN00iUmLC1XTlNBcnJheaIsKtIlJi8wXk5TTXV0YWJsZUFycmF5oy8sKtMyMwo0NTZXTlNXaGl0ZVxO
+U0NvbG9yU3BhY2VEMCAwABADgAzSJSY4OVdOU0NvbG9yojgq0iUmOzxXTlNJbWFnZaI7Kl8QD05TS2V5
+ZWRBcmNoaXZlctE/QFRyb290gAEACAARABoAIwAtADIANwBGAEwAVwBeAGUAcgB5AIEAgwCFAIoAjACO
+AJcAnACnAKkAqwCtALIAtQC3ALkAuwC9AMIA2QDbAN0kTyRUJF8kaCR7JH8kiiSTJJgkoCSjJKgktyS7
+JMIkyiTXJNwk3iTgJOUk7STwJPUk/SUAJRIlFSUaAAAAAAAAAgEAAAAAAAAAQQAAAAAAAAAAAAAAAAAA
+JRw
+</mutableData>
+        </image>
+        <image name="Blank_BG.png" width="320" height="480"/>
+        <image name="Buton_BG.png" width="259" height="39"/>
+        <image name="Login_TopTitleBar.png" width="320" height="44"/>
+        <image name="Logo.png" width="242" height="165"/>
+        <image name="ePN Logo.png" width="142" height="57"/>
+        <image name="ic_menu_icon" width="24" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

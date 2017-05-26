@@ -1,0 +1,40 @@
+Last Change
+
+Commented 
+/*Change on 9th November */
+
+1. IBRememberMe from every class
+2. Save dictionaries of app delegate in user default
+3. Change functionality of remember me
+4. Change in log out method.
+5. APP DELEGATE,DASHBOARD,SIDEBAR CHANGE OF CLASS IBMERCHANTVC TO IBCATEGORYVC
+
+/*Change on 9th November */
+
+1. Implementation of Gift Page
+
+/*Major change on 3rd December */
+
+- (IBAction)btnProfileClicked:(id)sender {
+    
+     else if([userID length]>0&&[userPayment isEqualToString:@"inactive"])
+     {
+     IBPaymentVC *objIBPaymentVC;
+     if (kDevice==kIphone) {
+     objIBPaymentVC=[[IBPaymentVC alloc]initWithNibName:@"IBPaymentVC" bundle:nil];
+     }
+     else{
+     objIBPaymentVC=[[IBPaymentVC alloc]initWithNibName:@"IBPaymentVC_iPad" bundle:nil];
+     
+     }
+     objIBPaymentVC.strClassTypeForPaymentScreen=@"Dashboard";
+     [kAppDelegate.navController setViewControllers:[NSArray arrayWithObject:objIBPaymentVC] animated:NO];
+     }
+     }
+ //*  commented */
+ [[kAppDelegate dictUserInfo]setValue:@"" forKey:@"userId"];
+ commented
+ Kuserid where it exists allover the project
+ 
+ /* Code upto 13th December with Phase -2 build */
+

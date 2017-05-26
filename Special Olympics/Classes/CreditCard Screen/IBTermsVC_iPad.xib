@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBTermsVC">
+            <connections>
+                <outlet property="btnArrowDown" destination="1Ja-8h-c5e" id="5th-wy-N1z"/>
+                <outlet property="btnArrowUp" destination="ULc-id-FQ9" id="i5g-YU-DfL"/>
+                <outlet property="lblCopyRight" destination="PiB-3f-8TM" id="maz-wj-S5y"/>
+                <outlet property="lbl_Top" destination="gdd-Zt-8iz" id="asS-ry-GzT"/>
+                <outlet property="txtViewPolicy" destination="crU-U1-g0N" id="U7E-qS-c4d"/>
+                <outlet property="txtViewTerms" destination="t5k-TN-czA" id="OO3-sH-twK"/>
+                <outlet property="view" destination="oFr-ou-umY" id="QgX-Tu-jwa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oFr-ou-umY">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="BG_ipad.png" id="hWa-vB-72X">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Logo.png" id="jcH-SF-CLQ">
+                    <rect key="frame" x="259" y="53" width="242" height="165"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="TopTitleBarBG.png" id="VwW-pu-lMT">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TERMS &amp; CONDITIONS™" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gdd-Zt-8iz">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="LoginBG_iPad.png" id="Di1-UH-530">
+                    <rect key="frame" x="64" y="209" width="640" height="717"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="t5k-TN-czA">
+                    <rect key="frame" x="100" y="268" width="560" height="580"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">ATTACHMENT A  
+INTERNET APP END-USER AGREEMENT PURSUANT TO LICENSE GRANT OF iBUDDYCLUB APP
+
+END USER AGREEMENT
+ 
+iBuddyClub App services on the Internet are made available by iBuddyClub Inc.("Company"). By accessing such product and services of Company on or through the Company’s Web Site, Mobile App, Smart Card, or other means via a sale of such use by a Licensed Independent Distributor of iBuddyClub Inc. or for any purpose even in connection with review of the ‘Free App’ and any other component of the licensed product, you as end-user (hereinafter "User") hereby agree to be bound by all of the terms and conditions contained in this Internet App End-User Agreement (this "Agreement"). Company reserves the right at its discretion to change the terms of this Agreement. The amended Agreement will be made available on-line and is effective as soon as it is posted on Company's Web Site. User's continued access and use of services on the Company Web Site after the posting of any amended Agreement shall constitute User's acceptance of, and agreement to be bound by, any such changes.  Mobile app, Smartcard, and Website
+ 
+If User does not agree to the terms and conditions of this Agreement, or any amended Agreement, User may not access or use iBuddyClub App or use the Software connected therewith, as that term is defined herein, via the Internet services of Company (through, inter alia, its Mobile App, Smartcard, or Web Site) in any way for any purpose, and User shall promptly discontinue such Internet access and use of such App and its attendant services and products.
+
+1. LIMITED LICENSE
+ 
+ (a) Copyright. iBuddyClub App on the Interenet contains original marketing  materials ("Materials"), the copyright for which is owned by Company, and which utilizes software ("Software") developed and licensed by iBuddyClub Inc. to search, retrieve and display the Materials. All other information displayed, transmitted or carried on the Company App and its attendant Web Site, collectively the "Content", are protected by copyright and other intellectual property laws. The Materials, Software and/or Content, and the rights thereto, are owned by Company, its affiliates or third party licensors. User agrees to abide by all copyright notices and restrictions attached to the App and attendant Web Site and/or any Materials, Software and/or Content accessed through the App and/or its attendant Web Site of the Company, not to alter the App or its attendant Web Site information and/or the Materials, Software and/or the Content in any way, and not to alter or remove any trademark, copyright or any other notice from copies of the App or its attendant Web Site information,  and/or the Materials, the Software and/or the Content thereof.
+ 
+ (b) Subscription Access. In the event User purchases a Subscription, then subject to the terms and conditions of this Agreement, User shall have access to the Materials, Software, Content and/or User documentation ("Documentation") for one (1)  year from the date User's Subscription has been approved, pursuant to the provisions of this Agreement ("Subscription").
+ 
+ (c) Permitted Use. Subject to the terms and conditions of this Agreement, and only during the Term, as that term is defined herein and provided User has paid the appropriate Subscription or Per Use Access fees, Company grants User a personal, non-transferable, limited and revocable license to use the Materials, Software, Content and/or Documentation only as permitted by this Agreement, including the right to use the Software in order to access, use and effect sale transactions of the Materials, the Content and/or the Documentation. Subject to the foregoing, the User may use the Software solely to access and use the Materials, the Content and/or the Documentation, provided the User has paid the appropriate Subscription and/or Per Use Access fee(s). This limited license grants User only the right to access and use the Materials, Content and/or Documentation for one (1) year, and other purposes directly related to User's business, including the right to reproduce limited excerpts from the Materials, Content and/or Documentation, to create documents prepared in the ordinary course of User's business, and the right to print out such limited excerpts from the Materials, the Content and/or the Documentation for such purposes; provided, however, User does not remove any trademarks, copyright and other notice contained in such Materials, Software, Content and/or Documentation.
+ 
+ (d) Rights Limited to User. Any and all rights under this Agreement granted to User are limited to a specific designated person that has paid or for whom has been paid to Company the appropriate Subscription and/or Per Use Access fee established by Company for access to and use of the Materials, Software, Content and/or Documentation as provided in this Agreement, and to whom a specific password has been issued. All passwords and access codes to the Materials, Software, the Content and/or the Documentation are personal to the User and are not transferable or assignable by User.
+
+ 
+2. USE RESTRICTIONS
+ 
+Except as expressly authorized pursuant to the terms of the limited license set forth in Section 1 of this Agreement, User may not and may not permit others to:
+
+ 
+ (a) Use the Software on or gain access to the Materials, Software, Content and/or Documentation from more than one machine at a time, nor install them in a fashion that makes the Materials, Software, Content and/or Documentation available on, running on or access from more than one machine at a time unless User has paid the additional user fee(s) and any other charges imposed by Company for such use or access;
+ 
+ (b) Sell, rent, lease, license, sublicense, or assign the Materials, Software, the Content and/or the Documentation, or the use of the Materials, Software, the Content and/or the Documentation to others;
+ 
+ (c) Transfer the Materials, the Content and/or the Documentation or any copy thereof to another party, unless User receives written permission from an authorized agent of Company, and unless User transfers all media and written materials in Web Site and retains no copies of the Materials, Software, the Content and/or the Documentation (including prior versions of the Materials, Software, the Content and/or the Documentation) for User's own use;
+ 
+ (d) Reverse engineer, decompile, disassemble, or otherwise derive the source code from the Software;
+ 
+ (e) Alter, modify, adapt, reconfigure, or prepare derivative works of the Materials, Software, the Content and/or the Documentation;
+ 
+ (f) Provide or permit access to the Materials, Software, the Content and/or the Documentation except for the sole use of User;
+ 
+ (g) Archive or retain any of the Materials, Software, the Content and/or the Documentation in any form without the written permission from Company;
+ 
+ (h) Distribute (including via e-mail or the Internet), or otherwise make available, copies of the Materials, Software, the Content and/or the Documentation to others, whether or not for payment or other consideration, without the written permission from Company. Requests for permission to retain, distribute or reproduce may be submitted to Company at admin@ibuddyclub.com ; or sent iBuddy Club, Inc. 9457 S. University Blvd. Suite 750, Highlands Ranch, CO 80126-4976
+ 
+ (i) Copy, extract, summarize, distribute or otherwise use the Materials, Software, the Content and/or the Documentation in any manner which competes with or substitutes for Company's distribution of the Materials, Software, the Content and/or the Documentation to its customers.
+
+ 
+3. CHANGES IN THE WEB SITE
+ 
+Company may modify, suspend, discontinue or restrict the use of any portion of the iBuddyclub App and the attendant Company Web Site, including the availability of any Materials, Software, the Content and/or the Documentation, at any time and without notice or liability.
+ 
+4. GENERAL DISCLAIMER AND LIMITATION OF LIABILITY
+ 
+THE COMPANY iBUDDYCLUB APP AND ATTENDANT WEB SITE PLUS ATTENDANT INFORMATION THEREOF, INCLUDING BUT NOT LIMITED TO THE USE OF THE MATERIALS, THE SOFTWARE, THE CONTENT AND/OR THE DOCUMENTATION CONTAINS FACTS, VIEWS, OPINIONS, STATEMENTS AND RECOMMENDATIONS OF THIRD PARTY INDIVIDUALS AND ORGANIZATIONS. COMPANY DOES NOT REPRESENT OR ENDORSE THE ACCURACY, CURRENTNESS OR RELIABILITY OF ANY ADVICE, OPINION, STATEMENT OR OTHER INFORMATION DISPLAYED, UPLOADED OR DISTRIBUTED THROUGH THE COMPANY APP OR ITS ATTENDANT WEB SITE AND INFORMATION THEREOF, INCLUDING BUT NOT LIMITED TO, THE MATERIALS, THE SOFTWARE, THE CONTENT AND/OR THE DOCUMENTATION. USER ACKNOWLEDGES THAT ANY RELIANCE UPON ANY SUCH OPINION, ADVICE, STATEMENT OR INFORMATION SHALL BE AT USER'S SOLE RISK. COMPANY DOES NOT MAKE ANY WARRANTY REGARDING THE COMPANY APP, WEB SITE, AND/OR ATTENDANT INFORMATION, INCLUDING, BUT NOT LIMITED TO, THE MATERIALS, THE SOFTWARE, THE CONTENT AND/OR THE DOCUMENTATION, OR ANY SERVICES OR PRODUCTS PROVIDED THROUGH OR IN CONNECTION WITH THE COMPANY WEB SITE. THE MATERIALS, SOFTWARE, THE CONTENT AND/OR THE DOCUMENTATION ARE LICENSED TO USER "AS-IS", WITHOUT ANY WARRANTY OF ANY NATURE, EXPRESS OR IMPLIED, AND BOTH COMPANY AND COMPANY, EXPRESSLY DISCLAIM ANY AND ALL WARRANTIES, INCLUDING, WITHOUT LIMITATION: (A) ANY WARRANTIES AS TO THE AVAILABILITY, ACCURACY OR COMPLETENESS OF THE MATERIALS, SOFTWARE, CONTENT, DOCUMENTATION, INFORMATION, PRODUCTS OR SERVICES WHICH ARE PART OF THE COMPANY APP, WEB SITE, AND/OR ATTENDANT INFORMATION; AND (B) WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, OR MERCHANTABILITY OR AGAINST INFRINGEMENT. IN NO EVENT WILL COMPANY, ITS SUBSIDIARIES, AFFILIATES, LICENSORS, EMPLOYEES, AGENTS OR CONTRACTORS BE LIABLE TO USER FOR ANY DAMAGES OR LOSSES, INCLUDING WITHOUT LIMITATION INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL OR PUNITIVE DAMAGES RESULTING FROM OR CAUSED BY THE COMPANY APP, WEB SITE, AND/OR ATTENDANT INFORMATION, THE MATERIALS, THE SOFTWARE, THE CONTENT, THE DOCUMENTATION, ITS PUBLIC POSTING BULLETIN BOARDS OR ANY ERRORS OR OMISSIONS IN THE MATERIALS, THE SOFTWARE, THE CONTENT AND/OR THE DOCUMENTATION, EVEN IF COMPANY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. ANY LIABILITY OF COMPANY, ITS SUBSIDIARIES, AFFILIATES, LICENSORS, EMPLOYEES, AGENTS OR CONTRACTORS, INCLUDING WITHOUT LIMITATION ANY LIABILITY FOR DAMAGES CAUSED BY ANY FAILURE OF PERFORMANCE, ERROR, OMISSION INTERRUPTION, DELETION, DEFECT, DELAY IN OPERATION OR TRANSMISSION, COMPUTER VIRUS, COMMUNICATIONS LINE FAILURE, THEFT OR DESTRUCTION OR UNAUTHORIZED ACCESS TO ALTERATION OF , OR USE OF RECORDS, WHETHER FOR BREACH OF CONTRACT, TORTIOUS BEHAVIOR, NEGLIGENCE, OR UNDER ANY OTHER CAUSE OF ACTION, CLAIMS OR DAMAGES, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS, BUSINESS PROFITS, BUSINESS INTERRUPTION, BUSINESS INFORMATION, DATA LOSS OR CORRUPTION, OR ANY OTHER PECUNIARY LOSS ARISING OUT OF OR RELATING TO THE USE OF OR THE INABILITY TO USE THE MATERIALS, THE SOFTWARE, THE CONTENT OR THE DOCUMENTATION, SHALL BE STRICTLY LIMITED TO THE AMOUNT PAID TO COMPANY BY OR ON BEHALF OF USER IN CONNECTION WITH THE COMPANY APP, WEB SITE, AND/OR ATTENDANT INFORMATION IN THE YEAR PRIOR TO THE CLAIMED INJURY OR DAMAGE. SOME STATES DO NOT ALLOW FOR SOME OT THE LIMITATIONS OR EXCLUSIONS AS SET FORTH HEREIN. 
+
+5. PROFESSIONAL RESPONSIBILITY
+ 
+User acknowledges that User is purchasing the license(s) hereunder to assist User in User's regular course of business. User further acknowledges that it is User's responsibility to review the research results to determine that all information provided to User is sufficiently accurate for User's purposes. The Materials, the Software, the Content and/or the Documentation are not intended to be a substitute for the exercise of User's judgment, not will such use of the license constitute the approval of, partnership with, joint venture in, or anything beyond an independent third-party relationship, particularly with no involvement or responsibility or liability in connection with any fund-raising by User and any state laws regulating such fund-raising.
+ 
+6. INTERNET LICENSE EXPIRATION
+ 
+User expressly acknowledges that Company and its licensors retains outright ownership of all of the Materials, Software, the Content and/or the Documentation accessed by User pursuant to this Agreement. Company does not require the return of the Materials, the Software, the Content and/or the Documentation accessed by User pursuant to this Agreement either at the end of the Term (as defined herein) covering this Agreement or upon receipt by User of updated Materials, Software, the Content and/or the Documentation. Consequently, access to the Materials, the Software, the Content and/or the Documentation on the Internet granted to User pursuant to this Agreement will automatically expire one (1) year from the issuance date of the license on a Subscription, unless the User has renewed a Subscription in which case the license shall extend through the end of the renewal Subscription.  User will take no unauthorized action to extend User's access to the Materials, the Software, the Content and/or the Documentation beyond the authorized time period. This Agreement and all of User's rights to the Materials, Software, the Content and/or the Documentation shall cease and terminate immediately in the event of a breach by User of any of the terms and conditions of this Agreement or in the event User fails to maintain User's Subscription for use of the Materials, the Software, the Content and/or the Documentation in good standing.
+ 
+7. DEFAULT
+ 
+In the event User defaults on any payment invoiced to User by Company’s Licensed Independent Distributors, or otherwise breaches any of the terms and conditions of this Agreement, Company reserves the right to terminate this Agreement and User's rights hereunder by giving User written or on-line notice of termination and to retain or apportion any and all sums paid by User hereunder. 
+
+8. ARBITRATION
+ 
+It is expressly agreed between User and Company that any controversy or claim arising out of or relating to this Agreement (expressly excepting therefrom any claim by Company for payment due from User hereunder) shall be settled by binding arbitration in Denver, Colorado in accordance with the substantive laws of the State of Colorado (excluding choice of law) and the Commercial Arbitration Rules of the American Arbitration Association. It is further expressly agreed between User and Company that judgment upon any award rendered by a single arbitrator may be entered in any court of competent jurisdiction.
+ 
+9. GOVERNING LAW
+ 
+This Agreement shall be governed by and construed in accordance with the laws of the State of Colorado, without regard to its conflicts of law provisions. Copyright issues are an exception, as copyright is governed by the laws of the United States. Venue is proper in Denver, Colorado federal and state courts.
+ 
+10. NO ASSIGNMENT
+ 
+The licenses and passwords granted and assigned to User pursuant to this Agreement are personal to User, and under no circumstances may be assigned, sublicensed or transferred by User without Company's prior written consent. Any attempted assignment, sublicense or transfer shall be null and void and shall result in the immediate and automatic termination of the licenses and passwords granted under this Agreement.
+ 
+11. ENFORCEABILITY/WAIVER
+ 
+If any provision to this Agreement shall be held to be invalid, illegal or unenforceable, the validity, legality and enforceability of the remaining provisions shall in no way be affected or impaired thereby. The failure of either party to exercise in any respect any right provided for herein shall not be deemed a waiver of any right hereunder.
+
+12.  MISCELLANEOUS
+
+The Company may assign or transfer any of its rights or obligations hereunder without your consent.  The Company will not be liable for losses or damages arising from unauthorized use of your account or password(s), and you agree to indemnify and hold harmless the Company for any improper or illegal use of your account.  You hereby agree and consent that the Company may use and disclose any information provided by you concerning your use of the App herein for any purpose not prohibited by law, subject to the provisions of the Company’s Privacy Policy on its Web Site.  By submitting or making available any content or other information in connection with the App, you hereby grant the Company and its successors and assigns a worldwide, non-exclusive, royalty-free, sub-licensable (through multiple tiers of sub-licensees), and transferable license to use, copy, transmit, modify, and prepare any works including those of public display, for the purposes of promoting or providing additional asset development or income streams of the Application or in any of the Company’s ventures or businesses in any media format or channel, subject to any laws on privacy, and subject to the Company’s provisions under its Privacy Policy on its Web Site.  Moreover, you agree that by paying for this App via credit card, the Company may automatically renew the purchase for the next year’s Application upon expiration of the term hereunder.  You may instruct the Company not to automatically renew the license and/or refund the payment therein at any time prior to the expiration of the term of this license by contacting admin@ibuddyclub.com or sending the request through the mail: iBuddy Club, Inc. 9457 S. University Blvd. Highlands Ranch, CO 80126-4976.
+ 
+13. ENTIRE AGREEMENT
+ 
+THIS IS A BINDING AGREEMENT, AND BY INSTALLING, CHECKING THE BOX AFFIRMATIVELY FOR AGREEMENT, OR EVEN USING THIS APPLICATION IN ANY WAY, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS LICENSE AND UNDERSTAND IT ADND THAT YOU AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS IN FULL.  Each party acknowledges that it has read this Agreement, understands it, and agrees to be bound by its terms and further agrees that it is the complete and exclusive statement of the agreement between the parties, which supersedes and merges all prior proposals, understandings and all other agreements, oral or written between the parties relating to this Agreement. This Agreement may not be modified or altered except by written instrument executed by a corporate officer of the Company.    By accepting,  I acknowledge charges described here on, the payment in full to be made and billed in accordance with standard policy of company issuing credit card. I also acknowledge that there is a No-Refund policy for the Services I have authorized for purchase. I certify thatI am an authorized user of this credit card and that I will not dispute the payment with my credit card company; as long as the transaction corresponds to the terms indicated in this form. 
+
+</mutableString>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="BJC-82-a0M"/>
+                    </connections>
+                </textView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ULc-id-FQ9">
+                    <rect key="frame" x="361" y="233" width="39" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="TopBgArrow_Up.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Ja-8h-c5e">
+                    <rect key="frame" x="361" y="860" width="39" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="TopBgArrow_Dwn.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="© 2013 iBuddyClub, Inc. All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PiB-3f-8TM">
+                    <rect key="frame" x="213" y="934" width="334" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6ny-q0-hFh">
+                    <rect key="frame" x="7" y="3" width="66" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="ButtonBack.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnBackClicked:" destination="-1" eventType="touchUpInside" id="UJB-Rq-j64"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="crU-U1-g0N">
+                    <rect key="frame" x="100" y="268" width="560" height="580"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
+
+Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
+We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.
+We will only retain personal information as long as necessary for the fulfillment of those purposes.
+We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
+Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
+We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
+We will make readily available to customers information about our policies and practices relating to the management of personal information.
+We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="q3Y-s0-JAL"/>
+                    </connections>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BG_ipad.png" width="1536" height="2048"/>
+        <image name="ButtonBack.png" width="132" height="77"/>
+        <image name="LoginBG_iPad.png" width="640" height="540"/>
+        <image name="Logo.png" width="242" height="165"/>
+        <image name="TopBgArrow_Dwn.png" width="78" height="40"/>
+        <image name="TopBgArrow_Up.png" width="78" height="40"/>
+        <image name="TopTitleBarBG.png" width="1536" height="89"/>
+    </resources>
+</document>

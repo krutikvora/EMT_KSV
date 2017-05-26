@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "ee1ce610-767d-bb49-8acd-d19bb49431a8++728" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ee1ce610-767d-bb49-8acd-d19bb49431a8++728" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "00019CC7-4972-4939-9B12-1038A6DDF397",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ee1ce610-767d-bb49-8acd-d19bb49431a8++728" : "BeyondTheCourt\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iBuddyClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iBuddyClient.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.10.17\/svn\/iBuddyClub",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ee1ce610-767d-bb49-8acd-d19bb49431a8++728"
+    }
+  ]
+}

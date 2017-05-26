@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBTabDescriptionVC">
+            <connections>
+                <outlet property="_lbl_Top" destination="pkM-YX-IqY" id="cCP-Wg-aW1"/>
+                <outlet property="_txtViewAboutUs" destination="sBF-bh-AJV" id="h3Q-gE-Gbk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_TopTitleBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="vcr-Ye-Oe0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="R6G-T1-doh"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkM-YX-IqY">
+                    <rect key="frame" x="165.5" y="10" width="45" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blank_BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-yF-7tG">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_FormBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-zC-5UK">
+                    <rect key="frame" x="10" y="80" width="355" height="547"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sBF-bh-AJV">
+                    <rect key="frame" x="25" y="120" width="545" height="818"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <mutableString key="text">For any kind of support, Please contact us at support@ibuddyclub.com  
+                                                                                                            Profile:
+If you are not logged in then you can use this option to login into the application but if you are logged in then you can tap on this option and edit your personal details.
+ 
+Join Here:
+You can be a part of our program with this option and use the fundraiser code assigned.  If you don't remember fundraiser code then you can search for it. You can purchase the app without any fundraiser as well.
+ 
+Login:
+To login into the application with the email and password details that you entered while registration.
+ 
+Offers:
+Here you can see the offers under categories within a selected range. You can search for any merchant within that range. Tap the "Current Location" button and see nearby merchants.
+ 
+Refer A Friend:
+You can refer the application to your friends and family. Just choose any option from Facebook, Twitter, Email or Message and enter their details. Your friend will get an email link with fundraiser code and then purchase the app with that code.
+ 
+Pay It Forward:
+Here you can donate some amount and that amount will go to fundraiser directly.
+ 
+With Gratitude:
+See all the donations made by supporters for your fundraiser of $50 or more.
+ 
+Notifications:Get notifications that your fundraiser wants you aware of. 
+ 
+Gift App:
+Gift an app to your friends or family and let them download the app for free and enjoy the deals in it.
+ 
+About Fire Rescue Funding:
+Information about Fire Rescue Funding</mutableString>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-bY-P5v">
+                    <rect key="frame" x="0.0" y="-1" width="48" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                    <state key="normal" image="ic_menu_icon"/>
+                    <connections>
+                        <action selector="showMenu:" destination="-1" eventType="touchUpInside" id="W0f-Jr-nJK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zEq-zC-5UK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="378-jn-eXq"/>
+                <constraint firstItem="sBF-bh-AJV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="7TL-AS-cxx"/>
+                <constraint firstAttribute="trailing" secondItem="zEq-zC-5UK" secondAttribute="trailing" constant="10" id="BUR-Jg-a8T"/>
+                <constraint firstItem="7OD-yF-7tG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Cm7-zH-uaC"/>
+                <constraint firstItem="sBF-bh-AJV" firstAttribute="leading" secondItem="zEq-zC-5UK" secondAttribute="trailing" constant="-355" id="EwE-Zb-Tng"/>
+                <constraint firstItem="sBF-bh-AJV" firstAttribute="top" secondItem="zEq-zC-5UK" secondAttribute="bottom" constant="-304" id="Fst-iL-rcW"/>
+                <constraint firstItem="pkM-YX-IqY" firstAttribute="centerY" secondItem="vcr-Ye-Oe0" secondAttribute="centerY" id="G7f-SV-Ozo"/>
+                <constraint firstItem="vcr-Ye-Oe0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GkM-MC-aQ8"/>
+                <constraint firstItem="zEq-zC-5UK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Hgh-He-I4n"/>
+                <constraint firstItem="pkM-YX-IqY" firstAttribute="centerX" secondItem="vcr-Ye-Oe0" secondAttribute="centerX" id="Irp-le-VRY"/>
+                <constraint firstAttribute="trailing" secondItem="7OD-yF-7tG" secondAttribute="trailing" id="J6j-Ft-VEa"/>
+                <constraint firstAttribute="trailing" secondItem="vcr-Ye-Oe0" secondAttribute="trailing" id="Mdn-rO-LMg"/>
+                <constraint firstAttribute="trailing" secondItem="sBF-bh-AJV" secondAttribute="trailing" constant="30" id="TrK-ZZ-A4h"/>
+                <constraint firstItem="pkM-YX-IqY" firstAttribute="top" secondItem="vcr-Ye-Oe0" secondAttribute="top" constant="10" id="W2w-eF-xMv"/>
+                <constraint firstItem="vcr-Ye-Oe0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XX2-qF-qKS"/>
+                <constraint firstItem="sBF-bh-AJV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="boZ-B1-rTa"/>
+                <constraint firstItem="pkM-YX-IqY" firstAttribute="centerX" secondItem="vcr-Ye-Oe0" secondAttribute="centerX" id="eit-R6-Jyc"/>
+                <constraint firstItem="7OD-yF-7tG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gmR-C7-Noo"/>
+                <constraint firstAttribute="bottom" secondItem="zEq-zC-5UK" secondAttribute="bottom" constant="40" id="jjr-jn-tBR"/>
+                <constraint firstItem="pkM-YX-IqY" firstAttribute="leading" secondItem="vcr-Ye-Oe0" secondAttribute="leading" id="mO4-jx-pkI"/>
+                <constraint firstAttribute="bottom" secondItem="sBF-bh-AJV" secondAttribute="bottom" constant="70" id="o8A-Ie-N7g"/>
+                <constraint firstAttribute="bottom" secondItem="7OD-yF-7tG" secondAttribute="bottom" id="u17-eN-oGO"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="EwE-Zb-Tng"/>
+                    <exclude reference="Fst-iL-rcW"/>
+                    <exclude reference="G7f-SV-Ozo"/>
+                    <exclude reference="eit-R6-Jyc"/>
+                    <exclude reference="mO4-jx-pkI"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="Blank_BG.png" width="320" height="480"/>
+        <image name="Login_FormBG.png" width="295" height="248"/>
+        <image name="Login_TopTitleBar.png" width="320" height="44"/>
+        <image name="ic_menu_icon" width="24" height="24"/>
+    </resources>
+</document>

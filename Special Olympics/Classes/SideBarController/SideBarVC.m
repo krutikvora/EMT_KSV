@@ -576,17 +576,17 @@
                 
                 
                 
-                if(![[result valueForKey:@"last_name"] isEqual:[NSNull null]] && [[result valueForKey:@"last_name"] length]>0)
-                {
-                    [CommonFunction setValueInUserDefault:@"userName" value:[[result valueForKey:@"first_name"] stringByAppendingString:[@" " stringByAppendingString:[result valueForKey:@"last_name"]]]];
+//                if(![[result valueForKey:@"last_name"] isEqual:[NSNull null]] && [[result valueForKey:@"last_name"] length]>0)
+//                {
+                    [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"first_name" ]];
                     
-                }
-                else
-                {
-                    [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"first_name"]];
-                    
-                }
-                
+//                }
+//                else
+//                {
+//                    [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"first_name"]];
+//                    
+//                }
+                [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"last_name"]];
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
                 [CommonFunction setValueInUserDefault:@"address" value:[result valueForKey:@"address"]];
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
@@ -981,7 +981,7 @@
         self.btnProfileLogin.hidden = YES;
         [_imgProfileImage setImageWithURL:[NSURL URLWithString:[[kAppDelegate dictUserInfo]valueForKey:@"profileImage"]]
                     placeholderImage:[UIImage imageNamed:@"user_placeHolder.png"]];
-        self.lblProfileName.text = [[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"name"];
+        self.lblProfileName.text = [NSString stringWithFormat:@"%@ %@",[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"name"],[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"last_name"]];
         self.lblProfileEmail.text = [[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"email"];
         
 //        //Added by Utkarsha to show badge count on Communication tool icon

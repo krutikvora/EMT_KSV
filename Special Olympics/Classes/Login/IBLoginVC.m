@@ -599,7 +599,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 //    buttonShowPassword.frame=CGRectMake(0, 0, 25, 25);
     self.txtEmailId.rightView=clearView;
     self.txtEmailId.rightViewMode=UITextFieldViewModeAlways;
-
+    [self.txtEmailId becomeFirstResponder];
 
     
 }

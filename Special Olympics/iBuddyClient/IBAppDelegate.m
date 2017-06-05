@@ -258,16 +258,17 @@
         {
             if ([[result valueForKey:@"isSubscribed"]isEqualToString:@"1"]) {
                 
-                if(![[result valueForKey:@"last_name"] isEqual:[NSNull null]] && [[result valueForKey:@"last_name"] length]>0)
-                {
-                    [CommonFunction setValueInUserDefault:@"userName" value:[[result valueForKey:@"first_name"] stringByAppendingString:[@" " stringByAppendingString:[result valueForKey:@"last_name"]]]];
-                    
-                }
-                else
-                {
+//                if(![[result valueForKey:@"last_name"] isEqual:[NSNull null]] && [[result valueForKey:@"last_name"] length]>0)
+//                {
+//                    [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"first_name"]];
+//                    
+//                }
+//                else
+//                {
                     [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"first_name"]];
                     
-                }
+//                }
+                [CommonFunction setValueInUserDefault:@"last_name" value:[result valueForKey:@"last_name"]];
                 
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
                 [CommonFunction setValueInUserDefault:@"address" value:[result valueForKey:@"address"]];

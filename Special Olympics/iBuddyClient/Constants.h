@@ -124,6 +124,8 @@
 #define kMakeCreditCardPaymentWithToken @"creditcardservicetoken"
 #define kgetSchoolDetails @"getSchoolDetails"
 #define kValidateStudentCode @"validateStudentCode"
+#define kSaveFundraisercode @"saveFundraisercode"
+
 
 /** Values for user default */
 
@@ -174,7 +176,7 @@
 #define kReferEmail @"Email"
 #define kReferSMS @"SMS"
 //#define kAppLink @"http://ibuddyclub.com/BTCApp"
-#define kAppLink @"a"
+#define kAppLink @"http://firerescuefunding.org/"
 
 #define kFacebookAppId @"209231079587519"
 #define kTerms @"Terms"

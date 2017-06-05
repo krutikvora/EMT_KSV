@@ -678,6 +678,10 @@
 		6520015D1ECE267C0050BEF3 /* KSSplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6520015C1ECE267C0050BEF3 /* KSSplashVC.m */; };
 		653675651ED06CFD00DAF458 /* Georgia-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 653675631ED06CFD00DAF458 /* Georgia-Bold.ttf */; };
 		653675661ED06CFD00DAF458 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 653675641ED06CFD00DAF458 /* Georgia.ttf */; };
+		653759781EDDE97B00DDD002 /* logo_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 653759771EDDE97B00DDD002 /* logo_share.png */; };
+		6537597C1EDE004300DDD002 /* dropdown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 653759791EDE004300DDD002 /* dropdown@2x.png */; };
+		6537597D1EDE004300DDD002 /* dropdown@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537597A1EDE004300DDD002 /* dropdown@2x~iPad.png */; };
+		6537597E1EDE004300DDD002 /* dropdown@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537597B1EDE004300DDD002 /* dropdown@3x.png */; };
 		6801D2D91A4BE8A1003C52AE /* IBSideBarDonationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801D2D71A4BE8A1003C52AE /* IBSideBarDonationViewController.m */; };
 		6801D2DA1A4BE8A1003C52AE /* IBSideBarDonationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801D2D81A4BE8A1003C52AE /* IBSideBarDonationViewController.xib */; };
 		6801D2DC1A4BE8E1003C52AE /* IBSideBarDonationViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801D2DB1A4BE8E1003C52AE /* IBSideBarDonationViewController_iPad.xib */; };
@@ -1491,6 +1495,10 @@
 		6520015C1ECE267C0050BEF3 /* KSSplashVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSplashVC.m; sourceTree = "<group>"; };
 		653675631ED06CFD00DAF458 /* Georgia-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia-Bold.ttf"; sourceTree = "<group>"; };
 		653675641ED06CFD00DAF458 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Georgia.ttf; sourceTree = "<group>"; };
+		653759771EDDE97B00DDD002 /* logo_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_share.png; sourceTree = "<group>"; };
+		653759791EDE004300DDD002 /* dropdown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown@2x.png"; sourceTree = "<group>"; };
+		6537597A1EDE004300DDD002 /* dropdown@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown@2x~iPad.png"; sourceTree = "<group>"; };
+		6537597B1EDE004300DDD002 /* dropdown@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown@3x.png"; sourceTree = "<group>"; };
 		6801D2D61A4BE8A1003C52AE /* IBSideBarDonationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBSideBarDonationViewController.h; path = SideBarController/IBSideBarDonationViewController.h; sourceTree = "<group>"; };
 		6801D2D71A4BE8A1003C52AE /* IBSideBarDonationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBSideBarDonationViewController.m; path = SideBarController/IBSideBarDonationViewController.m; sourceTree = "<group>"; };
 		6801D2D81A4BE8A1003C52AE /* IBSideBarDonationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IBSideBarDonationViewController.xib; path = SideBarController/IBSideBarDonationViewController.xib; sourceTree = "<group>"; };
@@ -2808,6 +2816,10 @@
 		6520014F1ECE0E5F0050BEF3 /* Change_new */ = {
 			isa = PBXGroup;
 			children = (
+				653759791EDE004300DDD002 /* dropdown@2x.png */,
+				6537597A1EDE004300DDD002 /* dropdown@2x~iPad.png */,
+				6537597B1EDE004300DDD002 /* dropdown@3x.png */,
+				653759771EDDE97B00DDD002 /* logo_share.png */,
 				651962DC1ED22D710013103B /* facebook_signin@2x.png */,
 				651962DD1ED22D710013103B /* facebook_signin~iPad@2x.png */,
 				651962DE1ED22D710013103B /* facebook_signin@3x.png */,
@@ -3030,6 +3042,7 @@
 				5E9A8ECE1DE6E51500483116 /* ButtonRight~iPad.png in Resources */,
 				5E9A90091DE6E51500483116 /* TopBG_ArrowDwn@2x.png in Resources */,
 				01173AAE173D03AF001826BF /* IBDashboardVC.xib in Resources */,
+				653759781EDDE97B00DDD002 /* logo_share.png in Resources */,
 				5E9A8F1D1DE6E51500483116 /* bar_silver@3x.png in Resources */,
 				5E9A8F531DE6E51500483116 /* IconReferActive@3x.png in Resources */,
 				5E9A8EFA1DE6E51500483116 /* RedeemIcon@2x~ipad.png in Resources */,
@@ -3079,6 +3092,7 @@
 				5E9A8F821DE6E51500483116 /* Trolley_Tab_hover@3x.png in Resources */,
 				5E9A8F911DE6E51500483116 /* BottomBar_AboutAct@2x.png in Resources */,
 				5E9A8F391DE6E51500483116 /* checkbox_inactive@2x.png in Resources */,
+				6537597D1EDE004300DDD002 /* dropdown@2x~iPad.png in Resources */,
 				5E9A8FCB1DE6E51500483116 /* IconMyProfileActive@2x.png in Resources */,
 				5E9A8FDD1DE6E51500483116 /* Offers_textbox@2x.png in Resources */,
 				5E9A8FBB1DE6E51500483116 /* Featured_Tab@2x.png in Resources */,
@@ -3235,6 +3249,7 @@
 				5E9A8F781DE6E51500483116 /* tab-2@3x.png in Resources */,
 				019F451D1753636700C2040B /* IBUserPayments_iPad.xib in Resources */,
 				1033AF681E967462007A7C67 /* icon_coin_regular@2x.png in Resources */,
+				6537597C1EDE004300DDD002 /* dropdown@2x.png in Resources */,
 				1033AF641E967243007A7C67 /* icon_coin_silver@2x.png in Resources */,
 				5E9A8F621DE6E51500483116 /* Pic@3x.png in Resources */,
 				5E9A8FA31DE6E51500483116 /* Button_Edit@2x.png in Resources */,
@@ -3412,6 +3427,7 @@
 				5E9A8F221DE6E51500483116 /* BottomBar_BG@3x.png in Resources */,
 				D2362DD31A947C2700A404B3 /* SideBarVC_iPad.xib in Resources */,
 				01F99C9A184DFE1A001BE244 /* IBMultipleAddressVC.xib in Resources */,
+				6537597E1EDE004300DDD002 /* dropdown@3x.png in Resources */,
 				5E9A8FE41DE6E51500483116 /* phone@2x.png in Resources */,
 				103201221E9CDFEB00C836A8 /* AppliIcon_iPad.png in Resources */,
 				5E9A8F491DE6E51500483116 /* icon_view-detail@3x.png in Resources */,

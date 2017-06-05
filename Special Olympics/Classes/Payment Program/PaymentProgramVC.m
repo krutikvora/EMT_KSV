@@ -26,11 +26,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 @property (weak, nonatomic) IBOutlet UILabel *lblCopyRight;
 @property (weak, nonatomic) IBOutlet UIButton *btnEducators;
+@property (weak, nonatomic) IBOutlet UILabel *lblSearchFundraiser;
 
 @end
 
 @implementation PaymentProgramVC
-@synthesize strSearchedSalesperson,lblCopyRight;
+@synthesize strSearchedSalesperson,lblCopyRight,dictProfileData;
 #pragma mark - View LifeCycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -118,11 +119,15 @@
      self.lblRecurringDate.font=[UIFont fontWithName:kFont size:self.lblRecurringDate.font.pointSize];
      self.lblSubscriptionstatus.font=[UIFont fontWithName:kFont size:self.lblSubscriptionstatus.font.pointSize];
     self.lblSalesperson.font=[UIFont fontWithName:kFont size:self.lblSalesperson.font.pointSize];
+    self.lblSearchFundraiser.font=[UIFont fontWithName:kFont size:self.lblSearchFundraiser.font.pointSize];
     self.lblOR.font=[UIFont fontWithName:kFont size:self.lblOR.font.pointSize];
     self.txtiBuddy.font=[UIFont fontWithName:kFont size: self.txtiBuddy.font.pointSize];
     self.btnOK.titleLabel.font=[UIFont fontWithName:kFont size:self.btnOK.titleLabel.font.pointSize];
     self.btnPaymentProgram.titleLabel.font=[UIFont fontWithName:kFont size:self.btnPaymentProgram.titleLabel.font.pointSize];
     self.btnEducators.titleLabel.font=[UIFont fontWithName:kFont size:self.btnEducators.titleLabel.font.pointSize];
+    
+    self.lblUniversalCode.font=[UIFont fontWithName:kFont size:self.lblSearchFundraiser.font.pointSize];
+    self.lblTitleText.font=[UIFont fontWithName:kFont size:self.lblSearchFundraiser.font.pointSize];
 
     self.txtiBuddy.editable=NO;
   
@@ -189,50 +194,123 @@
  */
 -(void)setClassPushAfterOK:(NSString *)salespersonID
 {
-    IBRegisterVC *objIBRegisterVC;
-    if (kDevice==kIphone)
-    {
-        objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC" bundle:nil];
-    }
-    else
-    {
-        objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC_iPad" bundle:nil];
-    }
-    //    objIBRegisterVC.btnTapped=@"educatorLogin";
-//    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
-    objIBRegisterVC.strEditProfile=@"Edit";
-    objIBRegisterVC.isNewUser=true;
-
-    //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
-    objIBRegisterVC.strController = @"My Profile";
-
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     if([self.txtSalesperson.text containsString:@"s"] || [self.txtSalesperson.text containsString:@"S"])
     {
-        objIBRegisterVC.strSalespersonCode=@"";
-        objIBRegisterVC.strStudentCode=[NSString stringWithFormat:@"%@",salespersonID];
-        
-        
+        [dict setValue:self.txtSalesperson.text forKey:@"studentId"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"Yes" forKey:@"Student"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+        [dict setValue:@"" forKey:@"salespersonId"];
     }
     else
     {
-        objIBRegisterVC.strStudentCode=@"";
+        [dict setValue:self.txtSalesperson.text forKey:@"salespersonId"];
+        [dict setValue:@"" forKey:@"studentId"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"No" forKey:@"Student"];
         
-        objIBRegisterVC.strSalespersonCode=[NSString stringWithFormat:@"%@",salespersonID];
-        
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+
     }
+//    [dict setValue:[[NSUserDefaults standardUserDefaults] valueForKey:kDeviceToken] forKey:@"tokenId"];
+//    [dict setValue:deviceTest forKey:@"deviceType"];
+    [dict setValue:[[kAppDelegate dictUserInfo]valueForKey:@"userId"] forKey:@"userId"];
     
-//    if(typeSegmentCntrl.selectedSegmentIndex==0)
-//    {
-//        objIBRegisterVC.btnTapped=@"purchaseWthoutFundraiser";
-//
-//    }
-//    else
-//    {
-//        objIBRegisterVC.btnTapped=@"educatorLogin";
-//        
-//        
-//    }
-    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+        [AsyncURLConnection request:[[AsyncURLConnection sharedManager]createJSONRequestForDictionary:dict method:kSaveFundraisercode] completeBlock: ^(NSData *data)
+         {
+             id result = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:kNilOptions error:nil];
+             if ([[result valueForKey:@"status"]isEqual:[NSNumber numberWithChar:1]])
+             {
+                 [self setUpdateProfileValues:result];
+                 IBRegisterVC *objIBRegisterVC;
+                 if (kDevice==kIphone)
+                 {
+                     objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC" bundle:nil];
+                 }
+                 else
+                 {
+                     objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC_iPad" bundle:nil];
+                 }
+                 //    objIBRegisterVC.btnTapped=@"educatorLogin";
+                 //    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+                 objIBRegisterVC.strEditProfile=@"Edit";
+                 objIBRegisterVC.isNewUser=true;
+                 
+                 //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
+                 objIBRegisterVC.strController = @"My Profile";
+                 
+                 if([self.txtSalesperson.text containsString:@"s"] || [self.txtSalesperson.text containsString:@"S"])
+                 {
+                     objIBRegisterVC.strSalespersonCode=@"";
+                     objIBRegisterVC.strStudentCode=[NSString stringWithFormat:@"%@",salespersonID];
+                     
+                     
+                 }
+                 else
+                 {
+                     objIBRegisterVC.strStudentCode=@"";
+                     
+                     objIBRegisterVC.strSalespersonCode=[NSString stringWithFormat:@"%@",salespersonID];
+                     
+                 }
+                 
+                 //    if(typeSegmentCntrl.selectedSegmentIndex==0)
+                 //    {
+                 //        objIBRegisterVC.btnTapped=@"purchaseWthoutFundraiser";
+                 //
+                 //    }
+                 //    else
+                 //    {
+                 //        objIBRegisterVC.btnTapped=@"educatorLogin";
+                 //        
+                 //        
+                 //    }
+                 kAppDelegate.navController = [[UINavigationController alloc] initWithRootViewController:objIBRegisterVC];
+                 //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
+                 //    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+                 
+                 kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
+                 kAppDelegate.navController.navigationBarHidden=true;
+                 kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
+                 
+                 kAppDelegate.sideMenuController.leftViewWidth = 260.0;
+                 kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
+                 [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
+
+                 
+             }
+             else if ([[result valueForKey:@"status"]isEqual:[NSNumber numberWithChar:0]]) {
+                 [CommonFunction fnAlert:@"Updation Failure" message:@"Please enter the complete details"];
+             }
+             
+             else if ([[result valueForKey:@"status"]isEqual:[NSNumber numberWithChar:-1]]) {
+                 [CommonFunction fnAlert:@"Server Error!" message:@"Please try again"];
+             }
+             else
+                 [CommonFunction fnAlert:@"Server Error!" message:@"Please try again"];
+             
+             [kAppDelegate hideProgressHUD];
+         }                          errorBlock: ^(NSError *error) {
+             if (error.code == NSURLErrorTimedOut) {
+                 [CommonFunction fnAlert:@"Alert!" message:kAlerTimedOut];
+             }
+             else {
+                 [CommonFunction fnAlert:@"Error" message:[error localizedDescription]];
+             }
+             [kAppDelegate hideProgressHUD];
+         }];
+
+
+}
+
+- (void)setUpdateProfileValues:(NSDictionary *)result {
+    if ([[CommonFunction getValueFromUserDefault:kZipCodeHighlighted]isEqualToString:@"False"]) {
+        [CommonFunction setValueInUserDefault:kZipCode value:[result valueForKey:@"zipcode"]];
+    }
+    kAppDelegate.dictUserInfo = [NSMutableDictionary dictionaryWithDictionary:result];
+    dictProfileData = [NSMutableDictionary dictionaryWithDictionary:result];
 }
 
 #pragma mark - Button Actions
@@ -254,7 +332,18 @@
     objIBRegisterVC.isNewUser=true;
 
     //    objIBRegisterVC.btnTapped=@"educatorLogin";
-    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+    kAppDelegate.navController = [[UINavigationController alloc] initWithRootViewController:objIBRegisterVC];
+    //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
+    //    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+    kAppDelegate.navController.navigationBarHidden=true;
+
+    kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
+    
+    kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
+    
+    kAppDelegate.sideMenuController.leftViewWidth = 260.0;
+    kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
+    [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
 }
 -(void)btnEducatorLoginClicked:(id)sender
 {
@@ -284,10 +373,21 @@
         objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC_iPad" bundle:nil];
     }
     objIBRegisterVC.strEditProfile=@"Edit";
+    kAppDelegate.navController = [[UINavigationController alloc] initWithRootViewController:objIBRegisterVC];
     //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
     objIBRegisterVC.strController = @"My Profile";
     objIBRegisterVC.isNewUser=true;
-    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+//    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
+    
+    kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
+    kAppDelegate.navController.navigationBarHidden=true;
+
+    kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
+    
+    kAppDelegate.sideMenuController.leftViewWidth = 260.0;
+    kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
+    [kAppDelegate.window setRootViewController:kAppDelegate.navController];
+
 
     
     
@@ -413,10 +513,15 @@
         typeSegmentCntrl.hidden=YES;
         self.txtSalesperson.hidden=YES;
         self.lblSalesperson.hidden=YES;
+        self.lblSearchFundraiser.hidden=YES;
         self.btnSearch.hidden=YES;
         self.lblSearchFundlizer.hidden = true;
         self.lblOR.hidden=YES;
         self.lblSubscriptionstatus.hidden=NO;
+        self.lblTitleText.hidden=true;
+        self.imgLogo.hidden=true;
+        self.lblUniversalCode.hidden=YES;
+
         if ([kAppDelegate.dictUserInfo valueForKey:@"nextPaymentDate"]!=NULL&&[[kAppDelegate.dictUserInfo valueForKey:@"paymentType"]isEqualToString:@"paypal"]){
             self.lblRecurringDate.hidden=NO;
             self.lblDate.hidden=NO;
@@ -437,6 +542,8 @@
         //typeSegmentCntrl.hidden=NO;
         self.txtSalesperson.hidden=NO;
         self.lblSalesperson.hidden=NO;
+        self.lblSearchFundraiser.hidden=NO;
+
         self.btnSearch.hidden=NO;
         self.lblSearchFundlizer.hidden = false;
 
@@ -444,6 +551,10 @@
         self.lblSubscriptionstatus.hidden=YES;
         self.lblRecurringDate.hidden=YES;
         self.lblDate.hidden=YES;
+        self.lblTitleText.hidden=false;
+        self.imgLogo.hidden=false;
+        self.lblUniversalCode.hidden=false;
+
     }
 }
 

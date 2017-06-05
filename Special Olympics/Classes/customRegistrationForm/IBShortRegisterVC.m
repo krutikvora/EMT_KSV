@@ -83,10 +83,18 @@
 
     
 	[self setUpCustomForm];
+
     [facebookLoginButton
      addTarget:self
      action:@selector(loginButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [mEmailAddressTextField resignFirstResponder];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+
+    [super viewWillAppear:animated];
+    [self.txtFirstname becomeFirstResponder];
+
 }
 -(void)btnShowpassword:(UIButton *)btneye
 {
@@ -388,7 +396,7 @@
             //[[kAppDelegate dictUserInfo]setObject:[dictInfo valueForKey:@"userDetail"] forKey:@"userDetail"];
             //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
             // [kAppDelegate.navController presentModalViewController:objIBRegisterVC animated:YES];
-            
+            objPaymentProgramVC.dictProfileData=dictProfileData;
             [kAppDelegate.navController pushViewController:objPaymentProgramVC animated:NO];
             
 //            IBRegisterVC *objIBRegisterVC;
@@ -500,7 +508,8 @@ else
             //[[kAppDelegate dictUserInfo]setObject:[dictInfo valueForKey:@"userDetail"] forKey:@"userDetail"];
             //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
             // [kAppDelegate.navController presentModalViewController:objIBRegisterVC animated:YES];
-            
+            objPaymentProgramVC.dictProfileData=dictProfileData;
+
             [kAppDelegate.navController pushViewController:objPaymentProgramVC animated:NO];
 
             
@@ -540,9 +549,9 @@ else
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setValue:self.mEmailAddressTextField.text forKey:@"email"];
     [dict setValue:self.mPassword.text forKey:@"password"];
-    [dict setValue:self.txtFirstname.text forKey:@"firstname"];
-    [dict setValue:self.txtLastname.text forKey:@"lastname"];
-    [dict setValue:self.txtPhone.text forKey:@"phone"];
+    [dict setValue:self.txtFirstname.text forKey:@"first_name"];
+    [dict setValue:self.txtLastname.text forKey:@"last_name"];
+    [dict setValue:self.txtPhone.text forKey:@"phone_no"];
 
     if ([self.strSalespersonCode length] > 0)
     {
@@ -657,7 +666,7 @@ else
 		objIBLoginVC = [[IBLoginVC alloc]initWithNibName:@"IBLoginVC_iPad" bundle:nil];
 	}
 	objIBLoginVC.classType = @"RegisterWithSaleCode";
-	[self.navigationController pushViewController:objIBLoginVC animated:YES];
+	[kAppDelegate.navController pushViewController:objIBLoginVC animated:YES];
 }
 
 - (IBAction)btnLoginClick:(id)sender {
@@ -669,7 +678,9 @@ else
     else {
         objIBLoginVC = [[IBLoginVC alloc]initWithNibName:@"IBLoginVC_iPad" bundle:nil];
     }
-    [kAppDelegate.navController setViewControllers:[NSArray arrayWithObject:objIBLoginVC] animated:NO];
+    objIBLoginVC.classType = @"RegisterWithSaleCode";
+
+    [kAppDelegate.navController pushViewController:objIBLoginVC animated:YES];
 
 }
 
@@ -726,21 +737,24 @@ else
 			}
 		}
 	}
-    if ([strEditProfile isEqualToString:@"fromSplash"])
-    
-    {
-        btnBack.hidden = YES;
-        _btnMenu.hidden=false;
+//    if ([strEditProfile isEqualToString:@"fromSplash"])
+//    
+//    {
+//        btnBack.hidden = YES;
+//        _btnMenu.hidden=false;
+//
+//    }
+//    else
+//    {
+//        
+//        btnBack.hidden = false;
+//        _btnMenu.hidden=true;
+//
+//
+//    }
+    btnBack.hidden = false;
+    _btnMenu.hidden=true;
 
-    }
-    else
-    {
-        
-        btnBack.hidden = false;
-        _btnMenu.hidden=true;
-
-
-    }
 	self.lblTop.font = [UIFont fontWithName:kFont size:_lblTop.font.pointSize];
 	self.btnSubmit.titleLabel.font = [UIFont fontWithName:kFont size:kAppDelegate.fontSizeSmall];
 	self.btnTapLogin.titleLabel.font = [UIFont fontWithName:kFont size:kAppDelegate.fontSizeSmall];
@@ -901,6 +915,8 @@ else
                 else{
                     objPaymentProgramVC=[[PaymentProgramVC alloc]initWithNibName:@"PaymentProgramVC_iPad" bundle:nil];
                 }
+                objPaymentProgramVC.dictProfileData=dictProfileData;
+//                objPaymentProgramVC.
                 //            objIBRegisterVC.strEditProfile=@"Edit";
                 //            //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
                 //            objIBRegisterVC.strController = @"My Profile";
@@ -956,6 +972,8 @@ else
                     else{
                         objPaymentProgramVC=[[PaymentProgramVC alloc]initWithNibName:@"PaymentProgramVC_iPad" bundle:nil];
                     }
+                    objPaymentProgramVC.dictProfileData=dictProfileData;
+
                     //            objIBRegisterVC.strEditProfile=@"Edit";
                     //            //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
                     //            objIBRegisterVC.strController = @"My Profile";

@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbl_ConferPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnUpdate;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogOut;
-
+@property (weak, nonatomic) IBOutlet UIView *backView;
 @end
 
 @implementation IBChangePasswordVC
@@ -162,6 +162,11 @@
     [self setTextboxborder:_fld_OldPassword];
     [self setTextboxborder:_fld_NewPassword];
     [self setTextboxborder:_fld_ConfermPassword];
+    _backView.layer.borderColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.0].CGColor;
+    _backView.layer.borderWidth = 1;
+    [_fld_OldPassword becomeFirstResponder];
+
+
 
 }
 

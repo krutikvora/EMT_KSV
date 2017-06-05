@@ -130,13 +130,34 @@ bool isBrowser;
            forKeyPath:@"_placeholderLabel.textColor"];
     }
 
-    UIView *leftPAdding = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 5, _txtZipCode.frame.size.height)];
-    _txtZipCode.leftView = leftPAdding;
+    UIImageView *leftPAdding = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, 30, 30)];
+    leftPAdding.image= [UIImage imageNamed:@"dropdown"];
+    leftPAdding.contentMode=UIViewContentModeScaleAspectFit;
+    _mMonth.rightView = leftPAdding;
+    _mMonth.rightViewMode = UITextFieldViewModeAlways;
+    
+    UIImageView *leftPAdding1 = [[UIImageView alloc]initWithFrame:CGRectMake(0,  5, 30, 30)];
+    leftPAdding1.image= [UIImage imageNamed:@"dropdown"];
+    leftPAdding1.contentMode=UIViewContentModeScaleAspectFit;
+
+    _mDate.rightView = leftPAdding1;
+    _mDate.rightViewMode = UITextFieldViewModeAlways;
+
+    UIImageView *leftPAdding2 = [[UIImageView alloc]initWithFrame:CGRectMake(0,  5, 30, 30)];
+    leftPAdding2.image= [UIImage imageNamed:@"dropdown"];
+    leftPAdding2.contentMode=UIViewContentModeScaleAspectFit;
+    mAgeGroupTextField.rightView = leftPAdding2;
+    mAgeGroupTextField.rightViewMode = UITextFieldViewModeAlways;
+
+
+    UIView *rightArrow = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 5, 40)];
+    _txtZipCode.leftView = rightArrow;
     _txtZipCode.leftViewMode = UITextFieldViewModeAlways;
     _txtZipCode.layer.borderColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.0].CGColor;
     _txtZipCode.layer.borderWidth = 1;
     [_txtZipCode setValue:[UIColor lightGrayColor]
-       forKeyPath:@"_placeholderLabel.textColor"];
+               forKeyPath:@"_placeholderLabel.textColor"];
+
 
 	[self createPickerForFields:[NSArray arrayWithObjects:mAgeGroupTextField, nil] withPickerDataInArrayFormat:@[
 	     @[@"0-18 years", @"19-39 years", @"40-55 years", @"55-over years"]]
@@ -145,8 +166,12 @@ bool isBrowser;
 
 
 	[self setUpCustomForm];
+    [self.mFirstNameTextField becomeFirstResponder];
+
+    
 	citiesList.hidden = YES;
 	stateList.hidden = YES;
+    [self.view bringSubviewToFront:_mScrollView];
 
 //    else
 //    {
@@ -175,7 +200,8 @@ bool isBrowser;
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
                 [CommonFunction setValueInUserDefault:@"address" value:[result valueForKey:@"address"]];
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
-                
+                [CommonFunction setValueInUserDefault:@"last_anme" value:[result valueForKey:@"last_name"]];
+
                 [CommonFunction setValueInUserDefault:@"zipCode" value:[result valueForKey:@"zipcode"]];
 //                NSString *cityPath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"plist"];
 //                NSString *statePath = [[NSBundle mainBundle] pathForResource:@"states1" ofType:@"plist"];
@@ -215,6 +241,14 @@ bool isBrowser;
                 else {
                     mFirstNameTextField.text = [dictProfileData valueForKey:@"name"];
                 }
+                
+                if ([[CommonFunction getValueFromUserDefault:@"last_name"] length] > 0) {
+                    self.mLastNameTextField.text = [CommonFunction getValueFromUserDefault:@"last_name"];
+                }
+                else {
+                    self.mLastNameTextField.text = [dictProfileData valueForKey:@"last_name"];
+                }
+
                 if ([[CommonFunction getValueFromUserDefault:@"address"] length] > 0) {
                     self.mAddressTextField.text = [CommonFunction getValueFromUserDefault:@"address"];
                 }
@@ -790,8 +824,14 @@ bool isBrowser;
 		self.mAddressTextField.text = [dictProfileData valueForKey:@"address"];
 	}
 
+    if ([[CommonFunction getValueFromUserDefault:@"last_name"] length] > 0) {
+        self.mLastNameTextField.text = [CommonFunction getValueFromUserDefault:@"last_name"];
+    }
+    else {
+        self.mLastNameTextField.text = [dictProfileData valueForKey:@"last_name"];
+    }
 
-	mLastNameTextField.text = [dictProfileData valueForKey:@"last_name"];
+//	mLastNameTextField.text = [dictProfileData valueForKey:@"last_name"];
 	_mMonth.text = [dictProfileData valueForKey:@"dobMonthName"];
     if ([[dictProfileData valueForKey:@"dobDay"] isEqualToString:@"00"]) {
         _mDate.text = @"";

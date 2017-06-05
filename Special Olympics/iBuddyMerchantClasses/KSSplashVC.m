@@ -51,20 +51,20 @@
     }
     objIBShortRegisterVC.strEditProfile=@"fromSplash";
 //    [self.navigationController pushViewController:objPaymentProgramVC animated:YES];
-    kAppDelegate.navController=[[UINavigationController alloc]initWithRootViewController:objIBShortRegisterVC];
+//    kAppDelegate.navController=[[UINavigationController alloc]initWithRootViewController:objIBShortRegisterVC];
     /*commented by Utkarsha to hide Ads it not available
      [self addBottomADView];
      */
-    kAppDelegate.navController.navigationBarHidden = YES;
+//    kAppDelegate.navController.navigationBarHidden = YES;
+    [kAppDelegate.navController pushViewController:objIBShortRegisterVC animated:true];
     
-    
-    kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
-    
-    kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
-    
-    kAppDelegate.sideMenuController.leftViewWidth = 260.0;
-    kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
-    [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
+//    kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
+//    
+//    kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
+//    
+//    kAppDelegate.sideMenuController.leftViewWidth = 260.0;
+//    kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
+//    [kAppDelegate.window setRootViewController:kAppDelegate.navController];
 
 
 }
@@ -83,11 +83,12 @@
     
     
     /**Initial miles set in merchant class**/
-    [kAppDelegate.navController pushViewController:objIBLoginVC animated:true];//=[[UINavigationController alloc]initWithRootViewController:objIBLoginVC];
+//    [kAppDelegate.navController pushViewController:objIBLoginVC animated:true];//=[[UINavigationController alloc]initWithRootViewController:objIBLoginVC];
     /*commented by Utkarsha to hide Ads it not available
      [self addBottomADView];
      */
-    kAppDelegate.navController.navigationBarHidden = YES;
+//    kAppDelegate.navController.navigationBarHidden = YES;
+    [kAppDelegate.navController pushViewController:objIBLoginVC animated:true];
 
     
 //    kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
@@ -96,7 +97,7 @@
 //    
 //    kAppDelegate.sideMenuController.leftViewWidth = 260.0;
 //    kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
-    [kAppDelegate.window setRootViewController:kAppDelegate.navController];
+//    [kAppDelegate.window setRootViewController:kAppDelegate.navController];
 
 
 }

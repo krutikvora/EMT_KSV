@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtCardNumber;
 @property (weak, nonatomic) IBOutlet UITextField *txtExpiration;
 @property (weak, nonatomic) IBOutlet UITextField *txtZipCodeField;
-@property (weak, nonatomic) IBOutlet UITextView *txtAddressField;
+@property (weak, nonatomic) IBOutlet UITextField *txtAddressField;
 @property (weak, nonatomic) IBOutlet UITextField *txtCVV2;
 @property (weak, nonatomic) IBOutlet UILabel *lblTop;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
@@ -59,6 +59,36 @@
     arrTypeOfCards=[[NSMutableArray alloc]initWithObjects:@"Visa",@"Master Card",@"American Express", nil];
     arrTypeOfCards=[[arrTypeOfCards sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] mutableCopy];
     arrTextFields = [[NSMutableArray alloc] initWithObjects:_txtTypeOfCard,_txtNameofCard,_txtCardNumber,_txtExpiration,_txtYear,_txtCVV2,self.txtAddressField,self.txtZipCodeField,  nil];
+    for (UITextField *obj in arrTextFields)
+    {
+        UIView *leftPAdding = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 5, obj.frame.size.height)];
+        obj.leftView = leftPAdding;
+        obj.leftViewMode = UITextFieldViewModeAlways;
+        obj.layer.borderColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.0].CGColor;
+        obj.layer.borderWidth = 1;
+        [obj setValue:[UIColor lightGrayColor]
+           forKeyPath:@"_placeholderLabel.textColor"];
+    }
+    
+    UIImageView *leftPAdding = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, 30, 30)];
+    leftPAdding.image= [UIImage imageNamed:@"dropdown"];
+    leftPAdding.contentMode=UIViewContentModeScaleAspectFit;
+    _txtTypeOfCard.rightView = leftPAdding;
+    _txtTypeOfCard.rightViewMode = UITextFieldViewModeAlways;
+    
+    UIImageView *leftPAdding1 = [[UIImageView alloc]initWithFrame:CGRectMake(0,  5, 30, 30)];
+    leftPAdding1.image= [UIImage imageNamed:@"dropdown"];
+    leftPAdding1.contentMode=UIViewContentModeScaleAspectFit;
+    _txtExpiration.rightView = leftPAdding1;
+    _txtExpiration.rightViewMode = UITextFieldViewModeAlways;
+    
+    UIImageView *leftPAdding2 = [[UIImageView alloc]initWithFrame:CGRectMake(0,  5, 30, 30)];
+    leftPAdding2.image= [UIImage imageNamed:@"dropdown"];
+    leftPAdding2.contentMode=UIViewContentModeScaleAspectFit;
+    _txtYear.rightView = leftPAdding2;
+    _txtYear.rightViewMode = UITextFieldViewModeAlways;
+
+    
     NSMutableArray *arrYears= [self getYearsArray];
     [self createPickerForFields:[NSArray arrayWithObjects:_txtTypeOfCard,_txtExpiration,_txtYear, nil] withPickerDataInArrayFormat:@[arrTypeOfCards,    @[@"Month",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12"],arrYears]];
     [self setUpCustomForm];
@@ -443,9 +473,6 @@
     self.lblTerms.font=[UIFont fontWithName:kFont size:self.lblTerms.font.pointSize];
     
     //Jasmeet changes
-    self.txtAddressField.layer.cornerRadius = 5.0;
-    self.txtAddressField.layer.borderWidth = 2.0;
-    self.txtAddressField.layer.borderColor =[UIColor whiteColor].CGColor;
 }
 /**
  Method to get years list
@@ -756,15 +783,10 @@
             }
         }
     }
-    return YES;
-    
-}
--(BOOL)customTextView:(UITextView *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)textEntered
-{
     if (textField == self.txtAddressField) {
         if (self.txtAddressField.text.length) {
             if ([textField.text length]>29) {
-                    [CommonFunction fnAlert:@"" message:@"Address can't be greater than 30 Characters."];
+                [CommonFunction fnAlert:@"" message:@"Address can't be greater than 30 Characters."];
                 return NO;
             }
             else {
@@ -772,7 +794,9 @@
             }
         }
     }
+
     return YES;
+    
 }
 #pragma mark Attributed Label delegate
 -(BOOL)attributedLabel:(OHAttributedLabel*)attributedLabel shouldFollowLink:(NSTextCheckingResult*)linkInfo

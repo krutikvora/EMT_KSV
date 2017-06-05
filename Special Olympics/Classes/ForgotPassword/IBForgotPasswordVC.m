@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn_Cancel;
 @property (weak, nonatomic) IBOutlet UITextField *txt_Email;
 @property (weak, nonatomic) IBOutlet UILabel *lblCopyRight;
+@property (weak, nonatomic) IBOutlet UIView *backView;
+
 @end
 
 @implementation IBForgotPasswordVC
@@ -81,7 +83,10 @@
     _txt_Email.layer.borderWidth = 1;
     [_txt_Email setValue:[UIColor lightGrayColor]
                forKeyPath:@"_placeholderLabel.textColor"];
-
+    
+    _backView.layer.borderColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.0].CGColor;
+    _backView.layer.borderWidth = 1;
+    [_txt_Email becomeFirstResponder];
 }
 
 #pragma mark-

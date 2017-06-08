@@ -68,8 +68,8 @@
     {
 
     }
-    if(dictUserInfo.allKeys.count == 0)
-    {
+//    if(dictUserInfo.allKeys.count == 0)
+//    {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:[CommonFunction getDeviceName:@"MainStoryboard_"] bundle:nil];
         UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"KSSplashVC"];
         navController = [[UINavigationController alloc] initWithRootViewController:viewController];
@@ -82,13 +82,13 @@
         [self.window makeKeyAndVisible];
 
         
-    }
-    else
-    {
-        [self getPaymentTokenForNewuser];
-
-        // Override point for customization after application launch.
-    }
+//    }
+//    else
+//    {
+//        [self getPaymentTokenForNewuser];
+//
+//        // Override point for customization after application launch.
+//    }
 
 	//[self addSideNavigation];
 	//[self addLeftRightGestures];
@@ -1163,6 +1163,7 @@
 		        [self hideToolbar];
 			}
 		} errorBlock: ^(NSError *error) {
+            
 		}];
 	}
 }

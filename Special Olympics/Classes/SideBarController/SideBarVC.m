@@ -556,6 +556,7 @@
             [CommonFunction setValueInUserDefault:kZipCodeHighlighted value:@""];
             [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kdictUserInfo];
             [[NSUserDefaults standardUserDefaults] synchronize];
+            [kAppDelegate.dictUserInfo removeAllObjects];
 
             IBLoginVC *objIBLoginVC;
             
@@ -586,7 +587,7 @@
 //                    [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"first_name"]];
 //                    
 //                }
-                [CommonFunction setValueInUserDefault:@"userName" value:[result valueForKey:@"last_name"]];
+                [CommonFunction setValueInUserDefault:@"last_name" value:[result valueForKey:@"last_name"]];
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
                 [CommonFunction setValueInUserDefault:@"address" value:[result valueForKey:@"address"]];
                 NSLog(@"get value %@",[CommonFunction getValueFromUserDefault:@"address"]);
@@ -981,7 +982,7 @@
         self.btnProfileLogin.hidden = YES;
         [_imgProfileImage setImageWithURL:[NSURL URLWithString:[[kAppDelegate dictUserInfo]valueForKey:@"profileImage"]]
                     placeholderImage:[UIImage imageNamed:@"user_placeHolder.png"]];
-        self.lblProfileName.text = [NSString stringWithFormat:@"%@ %@",[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"name"],[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"last_name"]];
+        self.lblProfileName.text = [NSString stringWithFormat:@"%@ %@",[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"first_name"],[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"last_name"]];
         self.lblProfileEmail.text = [[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"email"];
         
 //        //Added by Utkarsha to show badge count on Communication tool icon
@@ -1310,6 +1311,7 @@
     [CommonFunction setValueInUserDefault:kZipCodeHighlighted value:@""];
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kdictUserInfo];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [kAppDelegate.dictUserInfo removeAllObjects];
     //    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kdictUserPaymentInfo];
     //    [[NSUserDefaults standardUserDefaults] synchronize];
     [kAppDelegate hideMenu];

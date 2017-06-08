@@ -54,6 +54,7 @@
     [super viewDidLoad];
     //Added by Utkarsha so as to make iAds compatible to iOS 7 Layout
     [self setLayoutForiOS7];
+    [CommonFunction setValueInUserDefault:kIsPaymentScreenCompleted value:[NSString stringWithFormat:@"%d",false]];
 
     [self setInitialLabels];
     [self checkActiveUser];
@@ -237,10 +238,12 @@
                  //    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
                  objIBRegisterVC.strEditProfile=@"Edit";
                  objIBRegisterVC.isNewUser=true;
-                 
+                 [CommonFunction setValueInUserDefault:kIsPaymentScreenCompleted value:[NSString stringWithFormat:@"%d",true]];
+
                  //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
                  objIBRegisterVC.strController = @"My Profile";
-                 
+                 objIBRegisterVC.dictProfileData=[[kAppDelegate dictUserInfo] valueForKey:@"userDetail"];
+
                  if([self.txtSalesperson.text containsString:@"s"] || [self.txtSalesperson.text containsString:@"S"])
                  {
                      objIBRegisterVC.strSalespersonCode=@"";
@@ -311,6 +314,10 @@
     }
     kAppDelegate.dictUserInfo = [NSMutableDictionary dictionaryWithDictionary:result];
     dictProfileData = [NSMutableDictionary dictionaryWithDictionary:result];
+    NSData *newdata = [NSKeyedArchiver archivedDataWithRootObject:kAppDelegate.dictUserInfo];
+    [[NSUserDefaults standardUserDefaults] setObject:newdata forKey:kdictUserInfo];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
 }
 
 #pragma mark - Button Actions
@@ -330,12 +337,14 @@
     //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
     objIBRegisterVC.strController = @"My Profile";
     objIBRegisterVC.isNewUser=true;
+    objIBRegisterVC.dictProfileData=[[kAppDelegate dictUserInfo] valueForKey:@"userDetail"];
 
     //    objIBRegisterVC.btnTapped=@"educatorLogin";
     kAppDelegate.navController = [[UINavigationController alloc] initWithRootViewController:objIBRegisterVC];
     //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
     //    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
     kAppDelegate.navController.navigationBarHidden=true;
+    [CommonFunction setValueInUserDefault:kIsPaymentScreenCompleted value:[NSString stringWithFormat:@"%d",true]];
 
     kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
     
@@ -377,6 +386,8 @@
     //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
     objIBRegisterVC.strController = @"My Profile";
     objIBRegisterVC.isNewUser=true;
+    objIBRegisterVC.dictProfileData=[[kAppDelegate dictUserInfo] valueForKey:@"userDetail"];
+
 //    [self.navigationController pushViewController:objIBRegisterVC animated:YES];
     
     kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];

@@ -146,6 +146,7 @@
 #define kPasswordChanged @"PasswordChanged"
 #define kdictUserInfo @"dictUserInfo"
 #define kdictUserPaymentInfo @"dictUserPaymentInfo"
+#define kIsPaymentScreenCompleted @"IsPaymentScreenCompleted"
 
 /*Pooja*/
 #define kgettrollieslist @"trollieslist"

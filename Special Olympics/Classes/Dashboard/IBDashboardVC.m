@@ -343,7 +343,8 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 //    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kdictUserPaymentInfo];
 //    [[NSUserDefaults standardUserDefaults] synchronize];
-    
+    [kAppDelegate.dictUserInfo removeAllObjects];
+
     if ([alertView tag]==kLogOutAlertTag && buttonIndex==0) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:[CommonFunction getDeviceName:@"MainStoryboard_"] bundle:nil];
         UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"KSSplashVC"];

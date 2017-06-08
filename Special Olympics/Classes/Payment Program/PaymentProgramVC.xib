@@ -60,7 +60,7 @@
                     <frame key="frameInset" minX="53.75%" minY="12.24%" width="240" height="165"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U2H-ZY-Dxk">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U2H-ZY-Dxk">
                     <frame key="frameInset" minX="-1" width="48" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                     <state key="normal" image="ic_menu_icon"/>

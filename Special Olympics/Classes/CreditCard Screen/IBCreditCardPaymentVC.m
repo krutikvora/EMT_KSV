@@ -597,7 +597,7 @@
         [CommonFunction setValueInUserDefault:@"zipCode" value:self.txtZipCodeField.text];
          //kAppDelegate.dictUserInfo = [NSMutableDictionary dictionaryWithDictionary:dictInfo];
         NSLog(@"%@",kAppDelegate.dictUserInfo);
-        //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
+        objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
         // [kAppDelegate.navController presentModalViewController:objIBRegisterVC animated:YES];
         
         [kAppDelegate.navController pushViewController:objIBRegisterVC animated:NO];

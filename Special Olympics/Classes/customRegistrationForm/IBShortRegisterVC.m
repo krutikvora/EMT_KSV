@@ -765,6 +765,10 @@ else
 
 - (void)setRegistrationVariables:(NSDictionary *)result {
 	kAppDelegate.dictUserInfo = [NSMutableDictionary dictionaryWithDictionary:result];
+    NSData *newdata = [NSKeyedArchiver archivedDataWithRootObject:kAppDelegate.dictUserInfo];
+    [[NSUserDefaults standardUserDefaults] setObject:newdata forKey:kdictUserInfo];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
 	[CommonFunction setValueInUserDefault:kZipCode value:[result valueForKey:@"zipcode"]];
 	[CommonFunction setValueInUserDefault:kZipCodeHighlighted value:@"False"];
 	self.strEditProfile = @"RegisterSuccess";

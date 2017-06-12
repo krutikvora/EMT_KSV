@@ -25,5 +25,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTitleText;
 @property (weak, nonatomic) IBOutlet UILabel *lblSearchFundlizer;
+@property (weak, nonatomic) IBOutlet UIButton *btnMenu;
 
 @end

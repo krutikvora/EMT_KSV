@@ -118,7 +118,7 @@
 #define kGetSalesperson @"getsalesperson"
 #define kgetsalespersondetail @"getsalespersondetail"
 #define kgetfundraisers @"getfundraisers"
-#define kReferAFriend @"referafriendSOCO"
+#define kReferAFriend @"firerescuefunding"
 #define kCheckUserStatus @"checkuserstatus"
 #define kGetPaymnetToken @"getuserpaymenttoken"
 #define kMakeCreditCardPaymentWithToken @"creditcardservicetoken"

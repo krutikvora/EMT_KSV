@@ -156,7 +156,8 @@
                  */
                 
                 [kAppDelegate.window makeKeyAndVisible];
-                
+                [kAppDelegate addBottomADView];
+
                 kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
                 
                 kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
@@ -164,7 +165,6 @@
                 kAppDelegate.sideMenuController.leftViewWidth = 260.0;
                 kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
                 [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
-                [kAppDelegate addBottomADView];
                 
                 [kAppDelegate.window makeKeyAndVisible];
                 
@@ -197,8 +197,9 @@
                     
                     kAppDelegate.sideMenuController.leftViewWidth = 260.0;
                     kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
-                    [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
                     [kAppDelegate addBottomADView];
+
+                    [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
                     
                     [kAppDelegate.window makeKeyAndVisible];
                     
@@ -221,6 +222,7 @@
                     //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
                     // [kAppDelegate.navController presentModalViewController:objIBRegisterVC animated:YES];
                     objPaymentProgramVC.dictProfileData=[[kAppDelegate dictUserInfo] valueForKey:@"userDetail"];
+                    objPaymentProgramVC.btnMenu.hidden=true;
                     kAppDelegate.navController= [[UINavigationController alloc]initWithRootViewController:objPaymentProgramVC];
                     kAppDelegate.navController.navigationBarHidden=true;
                     [kAppDelegate.window setRootViewController:kAppDelegate.navController];

@@ -30,6 +30,7 @@
                 <outlet property="mScrollView" destination="56" id="170"/>
                 <outlet property="mState" destination="108" id="111"/>
                 <outlet property="stateList" destination="174" id="178"/>
+                <outlet property="txtNotes" destination="148" id="Y7N-eK-Eon"/>
                 <outlet property="txtZipCode" destination="PgU-b8-3Uf" id="aJA-eB-Vgj"/>
                 <outlet property="view" destination="1" id="134"/>
             </connections>
@@ -235,7 +236,7 @@ Only jpeg, gif or png are allowed with a minimum dimensions of 300 x 300 px.</st
                             </connections>
                         </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="142">
-                            <rect key="frame" x="115" y="816" width="88" height="18"/>
+                            <rect key="frame" x="0.0" y="816" width="88" height="18"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" image="TaptoLogint.png">

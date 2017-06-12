@@ -31,7 +31,7 @@
 @end
 
 @implementation PaymentProgramVC
-@synthesize strSearchedSalesperson,lblCopyRight,dictProfileData;
+@synthesize strSearchedSalesperson,lblCopyRight,dictProfileData,btnMenu;
 #pragma mark - View LifeCycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -188,6 +188,14 @@
         _txtSalesperson.frame=CGRectMake(_txtSalesperson.frame.origin.x, _txtSalesperson.frame.origin.y, _txtSalesperson.frame.size.width, _txtSalesperson.frame.size.height+10);
 
     }
+    if(dictProfileData!=nil)
+    {
+        btnMenu.hidden=true;
+    }
+    else
+    {
+        btnMenu.hidden=false;
+    }
 
 }
 /*
@@ -198,7 +206,7 @@
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     if([self.txtSalesperson.text containsString:@"s"] || [self.txtSalesperson.text containsString:@"S"])
     {
-        [dict setValue:self.txtSalesperson.text forKey:@"studentId"];
+        [dict setValue:salespersonID forKey:@"studentId"];
         [[NSUserDefaults standardUserDefaults] setValue:@"Yes" forKey:@"Student"];
         [[NSUserDefaults standardUserDefaults] synchronize];
 
@@ -206,7 +214,7 @@
     }
     else
     {
-        [dict setValue:self.txtSalesperson.text forKey:@"salespersonId"];
+        [dict setValue:salespersonID forKey:@"salespersonId"];
         [dict setValue:@"" forKey:@"studentId"];
         [[NSUserDefaults standardUserDefaults] setValue:@"No" forKey:@"Student"];
         

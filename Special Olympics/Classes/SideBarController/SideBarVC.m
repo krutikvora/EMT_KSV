@@ -982,7 +982,11 @@
         self.btnProfileLogin.hidden = YES;
         [_imgProfileImage setImageWithURL:[NSURL URLWithString:[[kAppDelegate dictUserInfo]valueForKey:@"profileImage"]]
                     placeholderImage:[UIImage imageNamed:@"user_placeHolder.png"]];
-        self.lblProfileName.text = [NSString stringWithFormat:@"%@ %@",[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"first_name"],[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"last_name"]];
+        NSString *strName= [[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"name"];
+        if(strName.length == 0)
+            strName = [[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"first_name"];
+        
+        self.lblProfileName.text = [NSString stringWithFormat:@"%@ %@",strName,[[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"last_name"]];
         self.lblProfileEmail.text = [[[kAppDelegate dictUserInfo]valueForKey:@"userDetail"] valueForKey:@"email"];
         
 //        //Added by Utkarsha to show badge count on Communication tool icon

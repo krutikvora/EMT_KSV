@@ -109,6 +109,11 @@ bool isBrowser;
         }
         isNewUser=false;
     }
+    else
+    {
+        _btnUploadPhoto.hidden=true;
+        _txtNotes.hidden=true;
+    }
 
     mEmailAddressTextField.userInteractionEnabled = YES;
 	[self setInitialVaribles];
@@ -444,17 +449,18 @@ bool isBrowser;
 		}
 		else if ([strEditProfile isEqualToString:@"RegisteredNotPaid"] || [strEditProfile isEqualToString:@"RegisterSuccess"])
         {
-			IBPaymentVC *objIBPaymentVC;
-			if (kDevice == kIphone)
-            {
-				objIBPaymentVC = [[IBPaymentVC alloc]initWithNibName:@"IBPaymentVC" bundle:nil];
-			}
-			else
-            {
-				objIBPaymentVC = [[IBPaymentVC alloc]initWithNibName:@"IBPaymentVC_iPad" bundle:nil];
-			}
-			objIBPaymentVC.strClassTypeForPaymentScreen = @"Dashboard"; //bit for not to hide back button on payment screen.
-			[self.navigationController pushViewController:objIBPaymentVC animated:YES];
+                IBPaymentVC *objIBPaymentVC;
+                if (kDevice == kIphone)
+                {
+                    objIBPaymentVC = [[IBPaymentVC alloc]initWithNibName:@"IBPaymentVC" bundle:nil];
+                }
+                else
+                {
+                    objIBPaymentVC = [[IBPaymentVC alloc]initWithNibName:@"IBPaymentVC_iPad" bundle:nil];
+                }
+                objIBPaymentVC.strClassTypeForPaymentScreen = @"Dashboard"; //bit for not to hide back button on payment screen.
+                [self.navigationController pushViewController:objIBPaymentVC animated:YES];
+
 		}
 		
 	}
@@ -690,7 +696,7 @@ bool isBrowser;
 
         if(isNewUser==YES)
         {
-            mEmailAddressTextField.userInteractionEnabled = YES;
+            mEmailAddressTextField.userInteractionEnabled = NO;
         }
         else{
             mEmailAddressTextField.userInteractionEnabled = NO;

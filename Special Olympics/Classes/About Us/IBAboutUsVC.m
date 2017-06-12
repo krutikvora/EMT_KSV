@@ -72,25 +72,25 @@
 //    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 //    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 
-    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Mission: \"Fire Rescue Funding transforms lives through the joy of sport, every day, everywhere. We are the world's largest sports organization for people with intellectual disabilities: with 4.4 million athletes in 170 countries -- and millions more volunteers and supporters. We are also a global and social movement.\""];
+    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@" Along our goal to protect and serve those who do the same for us, The FireRescueFunding.org Organization strives to:"];
     
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 
     
-    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"The Compound Giving Effect"];
+    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Provide for the good and well being of all First Responders who unselfishly give assistance to those in times of need without recognition or personal self gain."];
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 
-    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Through the power of sports, people with intellectual disabilities discover new strengths and abilities, skills and success. Our athletes find joy, confidence and fulfillment -- on the playing field and in life. They also inspire people in their communities and elsewhere to open their hearts to a wider world of human talents and potential."];
+    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Create camaraderie and fellowship among all First Responders from all of the First Responder agencies nationally."];
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
-    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Supporters thank you for purchasing and utilizing the Fire Rescue Funding “Passport to Savings” Mobile App on behalf of your favorite program. We encourage you to frequent our merchant sponsors and leverage the savings while giving back through the Extra Donation, Plu$1 and renewal trademark features. We make it our goal and promise that you will benefit immensely from this experience and our merchant partners."];
+    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Render assistance and family support to First Responders who are injured or give the ultimate sacrifice while performing their duties as a First Responder and unselfishly helping others."];
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 
-    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"What you appreciate, appreciates!"];
+    strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"Recognize and act on the needs for all First Responders and to become the voice of all of the great citizens of our country who give their time, both professionally and as volunteers, who help those in need."];
     
     strTxtIbUddy=[strTxtIbUddy stringByAppendingString:@"\n"];
 

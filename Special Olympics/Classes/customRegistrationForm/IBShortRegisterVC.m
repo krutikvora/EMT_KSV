@@ -388,6 +388,8 @@
             else{
                 objPaymentProgramVC=[[PaymentProgramVC alloc]initWithNibName:@"PaymentProgramVC_iPad" bundle:nil];
             }
+            objPaymentProgramVC.btnMenu.hidden=true;
+
             //            objIBRegisterVC.strEditProfile=@"Edit";
             //            //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
             //            objIBRegisterVC.strController = @"My Profile";
@@ -509,6 +511,7 @@ else
             //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
             // [kAppDelegate.navController presentModalViewController:objIBRegisterVC animated:YES];
             objPaymentProgramVC.dictProfileData=dictProfileData;
+            objPaymentProgramVC.btnMenu.hidden=true;
 
             [kAppDelegate.navController pushViewController:objPaymentProgramVC animated:NO];
 
@@ -591,7 +594,7 @@ else
                 
                     NSString *messageString=[result valueForKey:@"message"] ;
                     NSString *appNameStr=@"Fire Rescue Funding";
-                    NSString *appURLString= @"specialolympicswins.com";
+                    NSString *appURLString= @"firerescuefunding.org";
                     NSString *doubleSlashStr= @"\n";
                     messageString=[messageString stringByReplacingOccurrencesOfString:@"appName" withString:appNameStr];
                     messageString=[messageString stringByReplacingOccurrencesOfString:@"appLink" withString:appURLString];
@@ -920,6 +923,8 @@ else
                     objPaymentProgramVC=[[PaymentProgramVC alloc]initWithNibName:@"PaymentProgramVC_iPad" bundle:nil];
                 }
                 objPaymentProgramVC.dictProfileData=dictProfileData;
+                objPaymentProgramVC.btnMenu.hidden=true;
+
 //                objPaymentProgramVC.
                 //            objIBRegisterVC.strEditProfile=@"Edit";
                 //            //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
@@ -976,6 +981,8 @@ else
                     else{
                         objPaymentProgramVC=[[PaymentProgramVC alloc]initWithNibName:@"PaymentProgramVC_iPad" bundle:nil];
                     }
+                    objPaymentProgramVC.btnMenu.hidden=true;
+
                     objPaymentProgramVC.dictProfileData=dictProfileData;
 
                     //            objIBRegisterVC.strEditProfile=@"Edit";

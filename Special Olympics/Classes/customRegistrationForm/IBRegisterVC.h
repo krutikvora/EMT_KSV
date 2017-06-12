@@ -48,6 +48,7 @@
 @property (strong, nonatomic) NSString *strSalespersonCode;
 @property (strong, nonatomic) IBOutlet UIScrollView *mScrollView;
 @property (strong, nonatomic) NSString *strStudentCode;
+@property (weak, nonatomic) IBOutlet UITextView *txtNotes;
 
 /**
    @property UITextFields

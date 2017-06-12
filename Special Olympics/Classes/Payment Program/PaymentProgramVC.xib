@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentProgramVC">
             <connections>
+                <outlet property="btnMenu" destination="U2H-ZY-Dxk" id="IRa-iC-J1k"/>
                 <outlet property="btnOK" destination="10" id="25"/>
                 <outlet property="btnPaymentProgram" destination="8" id="23"/>
                 <outlet property="btnSearch" destination="JI8-yU-VdP" id="aHz-nR-GFK"/>
@@ -60,7 +61,7 @@
                     <frame key="frameInset" minX="53.75%" minY="12.24%" width="240" height="165"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U2H-ZY-Dxk">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U2H-ZY-Dxk">
                     <frame key="frameInset" minX="-1" width="48" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                     <state key="normal" image="ic_menu_icon"/>

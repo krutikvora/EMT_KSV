@@ -285,6 +285,7 @@
                  kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
                  kAppDelegate.navController.navigationBarHidden=true;
                  kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
+                 [kAppDelegate addBottomADView];
                  
                  kAppDelegate.sideMenuController.leftViewWidth = 260.0;
                  kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
@@ -357,7 +358,8 @@
     kAppDelegate.objSideBarVC = [[SideBarVC alloc] initWithNibName:@"SideBarVC" bundle:nil];
     
     kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
-    
+    [kAppDelegate addBottomADView];
+
     kAppDelegate.sideMenuController.leftViewWidth = 260.0;
     kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
     [kAppDelegate.window setRootViewController:kAppDelegate.sideMenuController];
@@ -402,7 +404,8 @@
     kAppDelegate.navController.navigationBarHidden=true;
 
     kAppDelegate.sideMenuController = [LGSideMenuController sideMenuControllerWithRootViewController:kAppDelegate.navController leftViewController:kAppDelegate.objSideBarVC rightViewController:nil];
-    
+    [kAppDelegate addBottomADView];
+
     kAppDelegate.sideMenuController.leftViewWidth = 260.0;
     kAppDelegate.sideMenuController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
     [kAppDelegate.window setRootViewController:kAppDelegate.navController];
@@ -507,7 +510,7 @@
 
 - (IBAction)btnSearchClicked:(id)sender
 {
-     [CommonFunction fnAlert:@"Alert" message:@"Please make sure you search proper Fundraiser or Player"];
+     [CommonFunction fnAlert:@"Alert" message:@"please make sure you search proper organization or fundraiser"];
     [_txtSalesperson resignFirstResponder];
     IBSalepersonSearchVC *objIBSalepersonSearchVC;
     

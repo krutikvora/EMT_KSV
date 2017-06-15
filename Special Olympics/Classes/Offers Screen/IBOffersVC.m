@@ -199,6 +199,8 @@
 		[dict setValue:[dictMerchantInfo valueForKey:@"merchantId"]  forKey:@"merchantId"];
 		[dict setValue:[dictMerchantInfo valueForKey:@"categoryId"]  forKey:@"categoryId"];
         [dict setValue:@"40"  forKey:@"limit"];
+        [dict setValue:@"1" forKey:@"callfromfirerescuefunding"];
+
         [dict setValue:[NSString stringWithFormat:@"%d",offset]  forKey:@"offset"];
 
 		[AsyncURLConnection request:[[AsyncURLConnection sharedManager]createJSONRequestForDictionary:(NSMutableDictionary *)dict method:kOffersListUserID] completeBlock: ^(NSData *data) {

@@ -22,6 +22,8 @@
 }
 @property (strong, nonatomic) NSString *strStudentCode;
 @property (nonatomic,retain)  NSString *btnTapped;
+@property (weak, nonatomic) IBOutlet UILabel *lblNextClick;
+@property (weak, nonatomic) IBOutlet UIButton *btnAlreadyLogin;
 
 @property (weak, nonatomic) IBOutlet UITextField *mConfirmEmail;
 @property (strong, nonatomic) NSDictionary *dictProfileData;

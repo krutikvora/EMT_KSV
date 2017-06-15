@@ -8,10 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBShortRegisterVC">
             <connections>
+                <outlet property="btnAlreadyLogin" destination="A6T-RM-TEV" id="ceE-Lb-EYW"/>
                 <outlet property="btnBack" destination="tzd-8Z-Yt5" id="IBM-ZV-1dJ"/>
                 <outlet property="btnMenu" destination="DHE-Uo-M6K" id="HRF-mc-E4g"/>
                 <outlet property="btnSubmit" destination="cO3-CJ-oWI" id="dU3-Fh-AU6"/>
                 <outlet property="facebookLoginButton" destination="gLh-un-Hgx" id="k8C-mY-NKP"/>
+                <outlet property="lblNextClick" destination="W1F-mB-uC6" id="uxE-tG-LMT"/>
                 <outlet property="lblTop" destination="586-8j-s0P" id="pbS-A8-1Yu"/>
                 <outlet property="mConfirmPassword" destination="5oO-He-6Pj" id="gkQ-YE-c1d"/>
                 <outlet property="mEmailAddressTextField" destination="O16-g2-M7Z" id="d3I-r1-hw3"/>
@@ -124,6 +126,13 @@
                                 <action selector="btnLoginClick:" destination="-1" eventType="touchUpInside" id="sW0-0Y-VoD"/>
                             </connections>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Next to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W1F-mB-uC6">
+                            <rect key="frame" x="278" y="694" width="212" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cO3-CJ-oWI">
                             <rect key="frame" x="278" y="645" width="212" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -81,14 +81,14 @@
 #pragma mark Button Actions
 - (IBAction)btnSchoolClicked:(id)sender
 {
-    _lblStaticText.text=@"Enter fundraiser name or fundraiser code.";
+    _lblStaticText.text=@"Enter Fundraiser name or Fundraiser code.";
     [self setButtonImages:_btnSchool];
     [self reloadTable];
 
 }
 - (IBAction)btnStudentClicked:(id)sender
 {
-    _lblStaticText.text=@"Enter player name or player code.";
+    _lblStaticText.text=@"Enter Fundraiser name or Fundraiser code.";
     [self setButtonImages:_btnStudent];
     [self reloadTable];
 

@@ -962,6 +962,8 @@
 		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 		[dict setValue:latitude forKey:@"lat"]; //@"34.3230497"
 		[dict setValue:longitude forKey:@"long"]; //@"-80.8765205"
+        [dict setValue:@"1" forKey:@"callfromfirerescuefunding"];
+
 		[dict setValue:[self.dictUserInfo valueForKey:@"userId"] forKey:@"userId"];
 		[AsyncURLConnection request:[[AsyncURLConnection sharedManager]createJSONRequestForDictionary:dict method:kGetAds] completeBlock: ^(NSData *data) {
 		    id result = [NSJSONSerialization JSONObjectWithData:data

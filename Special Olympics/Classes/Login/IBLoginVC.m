@@ -747,14 +747,18 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if ([alertView tag]==kRegisterIncompleteTag && buttonIndex==1) {
-        IBShortRegisterVC *objIBRegisterVC;
+        IBRegisterVC *objIBRegisterVC;
         if (kDevice==kIphone) {
-            objIBRegisterVC=[[IBShortRegisterVC alloc]initWithNibName:@"IBShortRegisterVC" bundle:nil];
+            objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC" bundle:nil];
         }
         else{
-            objIBRegisterVC=[[IBShortRegisterVC alloc]initWithNibName:@"IBShortRegisterVC_iPad" bundle:nil];
+            objIBRegisterVC=[[IBRegisterVC alloc]initWithNibName:@"IBRegisterVC_iPad" bundle:nil];
         }
-        objIBRegisterVC.strEditProfile=@"RegisteredNotPaid";
+//        objIBRegisterVC.strEditProfile=@"RegisteredNotPaid";
+        objIBRegisterVC.strEditProfile = @"Edit";
+        objIBRegisterVC.strDetailRegistration = @"DetailRegistration";
+        objIBRegisterVC.strController = @"My Profile";
+        objIBRegisterVC.isNewUser=true;
         objIBRegisterVC.dictProfileData=dictLoginInfo;
         [kAppDelegate.navController pushViewController:objIBRegisterVC animated:YES];
     }
@@ -863,13 +867,20 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     [CommonFunction setValueInUserDefault:kZipCode value:[result valueForKey:@"zipcode"]];
     [CommonFunction setValueInUserDefault:kZipCodeHighlighted value:@"False"];
     [self setRememberMeValue:@"User"];
+    
+    [CommonFunction setValueInUserDefault:kNotificationBadgeCount value:[result valueForKey:@"badge_count"]];
+    NSData *newdata = [NSKeyedArchiver archivedDataWithRootObject:kAppDelegate.dictUserInfo];
+    [[NSUserDefaults standardUserDefaults] setObject:newdata forKey:kdictUserInfo];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self setRememberMeValue:@"User"];
+
 
 }
 -(void)setValueForActiveUser:(NSMutableDictionary *)result{
     
     kAppDelegate.dictUserInfo = [NSMutableDictionary dictionaryWithDictionary:result];
 //    [kAppDelegate.dictUserPaymentInfo setValue:[result  valueForKey:@"nextPaymentDate"] forKey:@"nextPaymentDate"];
-//    [kAppDelegate.dictUserPaymentInfo setValue:[result  valueForKey:@"paymentType"] forKey:@"paymentType"];
+//    [kAppDelegate.dictUserPaymen  tInfo setValue:[result  valueForKey:@"paymentType"] forKey:@"paymentType"];
     [CommonFunction setValueInUserDefault:kZipCode value:[result valueForKey:@"zipcode"]];
     [CommonFunction setValueInUserDefault:kZipCodeHighlighted value:@"False"];
     [CommonFunction setValueInUserDefault:kNotificationBadgeCount value:[result valueForKey:@"badge_count"]];

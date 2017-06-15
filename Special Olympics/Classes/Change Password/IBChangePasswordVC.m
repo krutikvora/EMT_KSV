@@ -195,6 +195,11 @@
         [CommonFunction fnAlert:@"" message:@"Please enter New Password and Confirm New Password"];
         returnValue=NO;
     }
+    else if (self.fld_NewPassword.text.length<6&&self.fld_OldPassword.text.length!=0) {
+        [CommonFunction fnAlert:@"" message:@"Please enter password of minimum 6 letters"];
+        returnValue=NO;
+    }
+
     else if (![self.fld_NewPassword.text isEqualToString:self.fld_ConfermPassword.text]) {
         [CommonFunction fnAlert:@"" message:@"Your New Password & Confirm New Password must be same"];
         returnValue=NO;

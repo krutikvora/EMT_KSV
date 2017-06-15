@@ -609,6 +609,8 @@
                 objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
                 objIBRegisterVC.strController = @"My Profile";
                 objIBRegisterVC.isNewUser=false;
+                objIBRegisterVC.dictProfileData = [[kAppDelegate dictUserInfo] valueForKey:@"userDetail"];
+
                 //  objIBRegisterVC.dictProfileData=[result valueForKey:@"userDetail"];
                 //[[kAppDelegate dictUserInfo]setObject:[dictInfo valueForKey:@"userDetail"] forKey:@"userDetail"];
                 //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
@@ -631,6 +633,8 @@
                 objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
                 objIBRegisterVC.strController = @"My Profile";
                 objIBRegisterVC.isNewUser=true;
+                objIBRegisterVC.dictProfileData = [[kAppDelegate dictUserInfo] valueForKey:@"userDetail"];
+
                 //  objIBRegisterVC.dictProfileData=[result valueForKey:@"userDetail"];
                 //[[kAppDelegate dictUserInfo]setObject:[dictInfo valueForKey:@"userDetail"] forKey:@"userDetail"];
                 //objIBRegisterVC.dictProfileData=[dictInfo valueForKey:@"userDetail"];
@@ -1189,7 +1193,7 @@
     lbl.textColor = [UIColor whiteColor];
 
     UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(15, 12, 26, 26)];
-    
+    img.contentMode=UIViewContentModeScaleAspectFit;
     if (userID > 0) {
         lbl.text = arrMenuWithLogin[indexPath.row];
         img.image = [UIImage imageNamed:arrIconMenuWithLogin[indexPath.row]];
@@ -1313,6 +1317,9 @@
     
     [CommonFunction setValueInUserDefault:kZipCode value:@""];
     [CommonFunction setValueInUserDefault:kZipCodeHighlighted value:@""];
+    [CommonFunction setValueInUserDefault:kIsPaymentScreenCompleted value:@"0"];
+
+    
     [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kdictUserInfo];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [kAppDelegate.dictUserInfo removeAllObjects];

@@ -114,6 +114,18 @@ bool isBrowser;
         _btnUploadPhoto.hidden=true;
         _txtNotes.hidden=true;
     }
+    if([[dictProfileData valueForKey:@"profileImage"] length]>0)
+    {
+        _btnUploadPhoto.hidden=true;
+        _txtNotes.hidden=true;
+
+    }
+    else
+    {
+        _btnUploadPhoto.hidden=false;
+        _txtNotes.hidden=false;
+
+    }
 
     mEmailAddressTextField.userInteractionEnabled = YES;
 	[self setInitialVaribles];
@@ -735,6 +747,7 @@ bool isBrowser;
 		[self setEditProfileTextValues];
 		self.lblTop.text = @"REGISTER™";
 		[self.btnSubmit setTitle:@"Next" forState:UIControlStateNormal];
+        _lblNextbutton.hidden=false;
 		for (UIView *view in self.mScrollView.subviews) {
 			if ([view isKindOfClass:[UITextField class]]) {
 				UITextField *textField = (UITextField *)view;
@@ -754,6 +767,8 @@ bool isBrowser;
 	else if ([strEditProfile isEqualToString:@"RegisterSuccess"])
     {
 		[self.btnSubmit setTitle:@"Next" forState:UIControlStateNormal];
+        _lblNextbutton.hidden=false;
+
 		for (UIView *view in self.mScrollView.subviews) {
 			if ([view isKindOfClass:[UITextField class]]) {
 				UITextField *textField = (UITextField *)view;
@@ -770,6 +785,8 @@ bool isBrowser;
     {
 
 		[self.btnSubmit setTitle:@"Submit" forState:UIControlStateNormal];
+        _lblNextbutton.hidden=true;
+
 		self.lblTop.text = @"REGISTER™";
 		mSelectedStateId = -1;
 		mSelectedCityID = -1;
@@ -808,9 +825,9 @@ bool isBrowser;
 	mDictCities = [[NSMutableArray alloc]init];
 	mCity.adjustsFontSizeToFitWidth = YES;
 	mState.adjustsFontSizeToFitWidth = YES;
-    if ([strSalespersonCode length] > 0 || [strStudentCode length]>0) {
-        self.btnTapLogin.hidden = NO;
-    }
+//    if ([strSalespersonCode length] > 0 || [strStudentCode length]>0) {
+//        self.btnTapLogin.hidden = NO;
+//    }
 	[self fetchStatePlistData];
 }
 

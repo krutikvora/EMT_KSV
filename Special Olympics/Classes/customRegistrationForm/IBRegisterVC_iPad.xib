@@ -15,6 +15,7 @@
                 <outlet property="citiesList" destination="96" id="99"/>
                 <outlet property="imgViewProfile" destination="30" id="56"/>
                 <outlet property="lblCopyRight" destination="NRu-kk-Z2u" id="bL1-do-HLy"/>
+                <outlet property="lblNextbutton" destination="sjs-pk-NEu" id="8bf-fS-ddA"/>
                 <outlet property="lblTop" destination="6" id="51"/>
                 <outlet property="lblZipCode" destination="Mfz-fq-lYc" id="33h-dK-Zda"/>
                 <outlet property="mAddressTextField" destination="ZaB-Ys-eMC" id="y0A-hV-wG5"/>
@@ -37,9 +38,13 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" misplaced="YES" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="768" height="879"/>
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1104"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="BG_ipad.png" id="5">
+                    <frame key="frameInset" width="768" height="100.00%"/>
+                    <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="TopTitleBarBG.png" id="3">
                     <frame key="frameInset" width="769" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -263,7 +268,7 @@ Only jpeg, gif or png are allowed with a minimum dimensions of 300 x 300 px.</st
                             <nil key="highlightedColor"/>
                         </label>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="80">
-                            <rect key="frame" x="229" y="946" width="88" height="18"/>
+                            <rect key="frame" x="229" y="986" width="88" height="18"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" image="TaptoLogint.png">
@@ -277,6 +282,13 @@ Only jpeg, gif or png are allowed with a minimum dimensions of 300 x 300 px.</st
                                 <action selector="btnTapLoginClicked:" destination="-1" eventType="touchUpInside" id="102"/>
                             </connections>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Next to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sjs-pk-NEu">
+                            <rect key="frame" x="167" y="948" width="212" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <connections>
                         <outlet property="delegate" destination="-1" id="54"/>
@@ -288,15 +300,11 @@ Only jpeg, gif or png are allowed with a minimum dimensions of 300 x 300 px.</st
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="BG_ipad.png" id="5">
-                    <frame key="frameInset" width="768" height="100.00%"/>
-                    <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="32" y="22.5"/>
+            <point key="canvasLocation" x="32" y="135"/>
         </view>
         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ZipCode*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mfz-fq-lYc">
             <rect key="frame" x="0.0" y="0.0" width="139" height="21"/>

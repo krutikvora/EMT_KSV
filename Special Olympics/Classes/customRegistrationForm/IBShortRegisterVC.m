@@ -169,8 +169,8 @@
              }
              [fbParaDict setValue:[result objectForKey:@"email"] forKey:@"email"];
              [fbParaDict setValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"fbToken"] forKey:@"facebookId"];
-             [fbParaDict setValue:[result objectForKey:@"firstname"] forKey:@"firstname"];
-             [fbParaDict setValue:[result objectForKey:@"lastname"] forKey:@"lastname"];
+             [fbParaDict setValue:[result objectForKey:@"first_name"] forKey:@"first_name"];
+             [fbParaDict setValue:[result objectForKey:@"last_name"] forKey:@"last_name"];
 
              
              if ([self.strSalespersonCode length] > 0) {
@@ -217,12 +217,13 @@
     [AsyncURLConnection request:[[AsyncURLConnection sharedManager]createJSONRequestForDictionary:fbParaDict method:kfbRegisterAPI] completeBlock: ^(NSData *data) {
         id result = [NSJSONSerialization JSONObjectWithData:data
                                                     options:kNilOptions error:nil];
+        NSLog(@"FB DAta : %@",result);
         userDetailDict=[[NSMutableDictionary alloc]init];
         userDetailDict=[result valueForKey:@"userDetail"];
         /*********** Done by pooja *************/
         if ([[result valueForKey:@"status"]isEqual:[NSNumber numberWithChar:1]] && [[result valueForKey:@"isUserGruEdu"] intValue] == 1)
         {
-           
+            
                 NSString *messageString=[result valueForKey:@"message"] ;
                 NSString *appNameStr=@"CyclingWins";
                 NSString *appURLString= @"Cyclingwins.com";
@@ -447,6 +448,10 @@ else
     else if (([self.mPassword.text isEqualToString:@""] || [self.mPassword.text isEqual:[NSNull null]] || [self.mPassword.text length] == 0) && (![strEditProfile isEqualToString:@"RegisteredNotPaid"] && ![strEditProfile isEqualToString:@"RegisterSuccess"] && ![strEditProfile isEqualToString:@"Edit"])) {
         [CommonFunction fnAlert:@"Alert" message:@"Please enter your Password."];
     }
+    else if (([self.mPassword.text isEqualToString:@""] || [self.mPassword.text isEqual:[NSNull null]] || [self.mPassword.text length] < 6) && (![strEditProfile isEqualToString:@"RegisteredNotPaid"] && ![strEditProfile isEqualToString:@"RegisterSuccess"] && ![strEditProfile isEqualToString:@"Edit"])) {
+        [CommonFunction fnAlert:@"Alert" message:@"Please enter password of minimum 6 letters"];
+    }
+
     else if (([self.mConfirmPassword.text isEqualToString:@""] || [self.mConfirmPassword.text isEqual:[NSNull null]] || [self.mConfirmPassword.text length] == 0) && (![strEditProfile isEqualToString:@"RegisteredNotPaid"] && ![strEditProfile isEqualToString:@"RegisterSuccess"] && ![strEditProfile isEqualToString:@"Edit"])) {
         [CommonFunction fnAlert:@"Alert" message:@"Please enter your Confirmed password."];
     }
@@ -694,6 +699,8 @@ else
 	if ([strEditProfile isEqualToString:@"RegisteredNotPaid"]) {
 		self.lblTop.text = @"REGISTER™";
 		[self.btnSubmit setTitle:@"Next" forState:UIControlStateNormal];
+        self.lblNextClick.hidden=false;
+        self.btnAlreadyLogin.hidden=true;
 //		for (UIView *view in self.mScrollView.subviews) {
 //			if ([view isKindOfClass:[UITextField class]]) {
 //				UITextField *textField = (UITextField *)view;
@@ -702,10 +709,10 @@ else
 //			}
 //		}
     
-        mEmailAddressTextField.text =[dictProfileData valueForKey:@"email"];
-        txtFirstname.text =[dictProfileData valueForKey:@"firstname"];
-        txtLastname.text =[dictProfileData valueForKey:@"lastname"];
-        txtPhone.text =[dictProfileData valueForKey:@"phone"];
+        mEmailAddressTextField.text =[userDetailDict valueForKey:@"email"];
+        txtFirstname.text =[userDetailDict valueForKey:@"first_name"];
+        txtLastname.text =[userDetailDict valueForKey:@"last_name"];
+        txtPhone.text =[userDetailDict valueForKey:@"phone"];
         mEmailAddressTextField.userInteractionEnabled = NO;
         txtFirstname.userInteractionEnabled = NO;
         txtLastname.userInteractionEnabled = NO;
@@ -718,6 +725,13 @@ else
 	}
 	else if ([strEditProfile isEqualToString:@"RegisterSuccess"]) {
 		[self.btnSubmit setTitle:@"Next" forState:UIControlStateNormal];
+        self.lblNextClick.hidden=false;
+        self.btnAlreadyLogin.hidden=true;
+        mEmailAddressTextField.text =[userDetailDict valueForKey:@"email"];
+        txtFirstname.text =[userDetailDict valueForKey:@"first_name"];
+        txtLastname.text =[userDetailDict valueForKey:@"last_name"];
+        txtPhone.text =[userDetailDict valueForKey:@"phone"];
+
 		for (UIView *view in self.mScrollView.subviews) {
 			if ([view isKindOfClass:[UITextField class]]) {
 				UITextField *textField = (UITextField *)view;

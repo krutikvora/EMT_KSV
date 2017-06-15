@@ -213,7 +213,8 @@
                     else{
                         objPaymentProgramVC=[[PaymentProgramVC alloc]initWithNibName:@"PaymentProgramVC_iPad" bundle:nil];
                     }
-                    //            objIBRegisterVC.strEditProfile=@"Edit";
+                    [kAppDelegate addBottomADView];
+//            objIBRegisterVC.strEditProfile=@"Edit";
                     //            //  objIBRegisterVC.strDetailRegistration=@"DetailRegistration";
                     //            objIBRegisterVC.strController = @"My Profile";
                     //            objIBRegisterVC.isNewUser=YES;
@@ -226,7 +227,6 @@
                     kAppDelegate.navController= [[UINavigationController alloc]initWithRootViewController:objPaymentProgramVC];
                     kAppDelegate.navController.navigationBarHidden=true;
                     [kAppDelegate.window setRootViewController:kAppDelegate.navController];
-                    [kAppDelegate addBottomADView];
                     
                     [kAppDelegate.window makeKeyAndVisible];
                     

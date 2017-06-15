@@ -8,10 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBShortRegisterVC">
             <connections>
+                <outlet property="btnAlreadyLogin" destination="CHd-GM-xZt" id="Nom-Ks-nVX"/>
                 <outlet property="btnBack" destination="Mjf-aS-PxO" id="CwJ-S2-bjJ"/>
                 <outlet property="btnMenu" destination="tWw-Yh-5Qk" id="RgK-CG-9bg"/>
                 <outlet property="btnSubmit" destination="9NL-F0-fWO" id="fkl-QZ-dx0"/>
                 <outlet property="facebookLoginButton" destination="QSo-fB-qgZ" id="bD8-GF-I2C"/>
+                <outlet property="lblNextClick" destination="iyH-X8-bzo" id="e3H-Hi-9tL"/>
                 <outlet property="lblTop" destination="jxd-T4-CDO" id="UHr-Um-zuC"/>
                 <outlet property="mConfirmPassword" destination="ivf-Kw-ban" id="CZr-wt-fPD"/>
                 <outlet property="mEmailAddressTextField" destination="D2S-dZ-F7S" id="eHZ-nN-Rle"/>
@@ -161,6 +163,13 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Sign in with Facebook" backgroundImage="facebook_signin.png"/>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Next to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iyH-X8-bzo">
+                            <rect key="frame" x="35" y="454" width="249" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
@@ -174,17 +183,17 @@
         </view>
     </objects>
     <resources>
-        <image name="BackButton.png" width="57" height="36"/>
+        <image name="BackButton.png" width="53" height="34"/>
         <image name="Blank_BG.png" width="320" height="480"/>
-        <image name="Login_ButtonBG.png" width="238" height="45"/>
-        <image name="Login_TopTitleBar.png" width="360" height="49"/>
-        <image name="Logo_small.png" width="112" height="73"/>
+        <image name="Login_ButtonBG.png" width="212" height="35"/>
+        <image name="Login_TopTitleBar.png" width="320" height="44"/>
+        <image name="Logo_small.png" width="99" height="65"/>
         <image name="facebook_signin.png" width="250" height="30"/>
-        <image name="ic_menu_icon" width="16" height="16"/>
+        <image name="ic_menu_icon" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina5_5.fullscreen"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

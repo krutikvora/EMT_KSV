@@ -78,6 +78,17 @@
    }*/
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    if (kDevice == kIphone) {
+
+    }
+    else
+    {
+        UIButton *btnMenu=[UIButton buttonWithType:UIButtonTypeCustom];
+        [btnMenu setImage:[UIImage imageNamed:@"ic_menu_icon"] forState:UIControlStateNormal];
+        btnMenu.frame=CGRectMake(0, 0, 44, 44);
+        [btnMenu addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btnMenu];
+    }
 	//Added by Utkarsha so as to make iAds compatible to iOS 7 Layout
 	[self setLayoutForiOS7];
 	[self setInitialVariables];

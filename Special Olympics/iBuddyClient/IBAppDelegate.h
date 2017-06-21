@@ -83,12 +83,10 @@
 @property BOOL shiftNavigation;
 
 -(void)showProgressHUD;
--(void)showProgressHUD;
 
 - (void)showMenu;
 - (void)hideMenu;
 
--(void)showProgressHUD;
 -(void)showProgressHUD:(UIView*)view;
 -(void)hideProgressHUD;
 -(void)addBottomADView;

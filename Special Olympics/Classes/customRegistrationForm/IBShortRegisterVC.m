@@ -712,7 +712,7 @@ else
         mEmailAddressTextField.text =[userDetailDict valueForKey:@"email"];
         txtFirstname.text =[userDetailDict valueForKey:@"first_name"];
         txtLastname.text =[userDetailDict valueForKey:@"last_name"];
-        txtPhone.text =[userDetailDict valueForKey:@"phone"];
+        txtPhone.text =[userDetailDict valueForKey:@"phone_no"];
         mEmailAddressTextField.userInteractionEnabled = NO;
         txtFirstname.userInteractionEnabled = NO;
         txtLastname.userInteractionEnabled = NO;
@@ -730,7 +730,7 @@ else
         mEmailAddressTextField.text =[userDetailDict valueForKey:@"email"];
         txtFirstname.text =[userDetailDict valueForKey:@"first_name"];
         txtLastname.text =[userDetailDict valueForKey:@"last_name"];
-        txtPhone.text =[userDetailDict valueForKey:@"phone"];
+        txtPhone.text =[userDetailDict valueForKey:@"phone_no"];
 
 		for (UIView *view in self.mScrollView.subviews) {
 			if ([view isKindOfClass:[UITextField class]]) {

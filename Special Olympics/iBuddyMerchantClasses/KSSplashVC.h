@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface KSSplashVC : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblErrorMsg;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignup;
 - (IBAction)btnSignupClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnRetry;
+- (IBAction)btnRetryClick:(id)sender;
 
 - (IBAction)btnLoginClick:(id)sender;
 @end

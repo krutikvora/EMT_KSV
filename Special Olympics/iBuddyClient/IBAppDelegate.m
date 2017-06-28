@@ -142,6 +142,9 @@
     if (launchOptions[UIApplicationLaunchOptionsLocationKey]) {
         [self.locationManager startUpdatingLocation];
     }
+    if ([self.locationManager respondsToSelector:@selector(setAllowsBackgroundLocationUpdates:)]) {
+        [self.locationManager setAllowsBackgroundLocationUpdates:NO];
+    }
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [[FBSDKApplicationDelegate sharedInstance] application:application

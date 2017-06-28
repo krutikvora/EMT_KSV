@@ -292,8 +292,8 @@
                 break;
         }};
     [controller setCompletionHandler:completionHandler];
-    [controller setInitialText:[NSString stringWithFormat:@"Congratulations! You are referred to participate in new progressive way of supporting local causes with #Fire Rescue Funding"]];
-    [controller addURL:[NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"]];
+    [controller setInitialText:[NSString stringWithFormat:@"Congratulations! You are referred to participate in new progressive way of supporting #Fire Rescue Funding"]];
+    [controller addURL:[NSURL URLWithString:kAppLink]];
     [controller addImage:[UIImage imageNamed:@"logo_share"]];
     
     [self presentViewController:controller animated:YES completion:Nil];

@@ -83,6 +83,8 @@
 
 -(void)getPaymentTokenForNewuser
 {
+    _btnRetry.hidden=true;
+    _lblErrorMsg.hidden=true;
 //    NSLog(@"%@ %@",self.navController.topViewController, self.navController.visibleViewController);
     [kAppDelegate showProgressHUD:kAppDelegate.window];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -237,7 +239,8 @@
             }
         }
         
-        
+        _btnRetry.hidden=true;
+        _lblErrorMsg.hidden=true;
         
     }
                      errorBlock:^(NSError *error) {
@@ -247,8 +250,16 @@
                          else{
                              [CommonFunction fnAlert:@"Error" message:[error localizedDescription]];}
                          [kAppDelegate hideProgressHUD];
+                         _btnRetry.hidden=false;
+                         _lblErrorMsg.hidden=false;
+                         _lblErrorMsg.text = [error localizedDescription];
+
                          
                      }];
+}
+
+- (IBAction)btnRetryClick:(id)sender {
+    [self getPaymentTokenForNewuser];
 }
 
 - (IBAction)btnLoginClick:(id)sender {

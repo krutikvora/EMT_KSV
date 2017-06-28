@@ -177,8 +177,8 @@
 #define kReferEmail @"Email"
 #define kReferSMS @"SMS"
 //#define kAppLink @"http://ibuddyclub.com/BTCApp"
-#define kAppLink @"http://firerescuefunding.org/"
-
+//#define kAppLink @"http://firerescuefunding.org/"
+#define kAppLink @"http://ibuddyclub.com/dashboardPage"
 #define kFacebookAppId @"209231079587519"
 #define kTerms @"Terms"
 #define kPrivacy @"Privacy"

@@ -510,7 +510,7 @@
 
 - (IBAction)btnSearchClicked:(id)sender
 {
-     [CommonFunction fnAlert:@"Alert" message:@"please make sure you search proper organization or fundraiser"];
+     [CommonFunction fnAlert:@"Alert" message:@"please make sure you search proper organization,fundraiser or name of Participant"];
     [_txtSalesperson resignFirstResponder];
     IBSalepersonSearchVC *objIBSalepersonSearchVC;
     
